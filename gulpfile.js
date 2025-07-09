@@ -37,10 +37,25 @@ function njk() {
     .pipe(gulp.dest('dist'))
     .pipe(sync.stream());
 };
+/*
 function scss() {
   return gulp.src('src/scss/styles.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/css'));
+};
+*/
+
+function scss() {
+  const plugins = [
+    autoprefixer(),
+  ];
+  return gulp.src('src/scss/styles.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(plugins))
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(sync.stream());
 };
 
 function browserSync() {

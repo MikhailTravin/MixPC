@@ -1,0 +1,558 @@
+<div id="personal-cabinet" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div data-close class="popup__close">
+                <img loading="lazy" src="img/icon/close2.svg" alt="">
+            </div>
+            <div class="popup__shadow figure-shadow">
+                <img loading="lazy" src="img/shadow1.webp" alt="">
+            </div>
+            <div class="popup__figure figure">
+                <img loading="lazy" src="img/figure6.webp" alt="">
+            </div>
+            <div class="popup__body">
+                <div data-tabs class="tabs">
+                    <nav data-tabs-titles class="tabs__navigation">
+                        <button data-tabs-title type="button" class="tabs__title _tab-active">Вход</button>
+                        <button data-tabs-title type="button" class="tabs__title">Регистрация</button>
+                    </nav>
+                    <div data-tabs-body class="tabs__content">
+                        <div class="tabs__body">
+                            <form action="#" class="form">
+                                <div class="form__content">
+                                    <div class="form__inputs">
+                                        <div class="form__input">
+                                            <input data-required="email" autocomplete="off" type="text" name="form[]"
+                                                data-error="Обязательное поле" placeholder="Email" class="input">
+                                        </div>
+                                        <div class="form__input">
+                                            <input data-required data-error="Обязательное поле" autocomplete="off"
+                                                type="password" name="form[]" placeholder="Пароль">
+                                            <div class="form__viewpass">
+                                                <img class="eye1" loading="lazy" src="../img/icon/eye2.svg" alt="">
+                                                <img class="eye2" loading="lazy" src="../img/icon/eye1.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="form__btn btn btn-big">
+                                        <span>Отправить</span>
+                                    </button>
+                                    <p>
+                                        Нажимая на кнопку “Отправить” вы соглашаетесь с <a href="#">политикой
+                                            конфиденциальности</a>
+                                    </p>
+                                </div>
+                            </form>
+                            <a href="#" data-popup="#forgot-password" class="forgot-password">
+                                <span>Забыли пароль?</span>
+                            </a>
+                        </div>
+                        <div class="tabs__body">
+                            <form action="#" class="form">
+                                <div class="form__content">
+                                    <div class="form__inputs">
+                                        <div class="form__input">
+                                            <input data-required autocomplete="off" type="text" name="form[]"
+                                                data-error="Обязательное поле" placeholder="Ваше имя" class="input">
+                                        </div>
+                                        <div class="form__input">
+                                            <input data-required="email" autocomplete="off" type="text" name="form[]"
+                                                data-error="Обязательное поле" placeholder="Номер телефона"
+                                                class="input">
+                                        </div>
+                                        <div class="form__input">
+                                            <input data-required autocomplete="off" type="text" name="form[]"
+                                                data-error="Обязательное поле" placeholder="Ваше имя" class="input">
+                                        </div>
+                                        <div class="form__input">
+                                            <input id="password" data-required data-error="Обязательное поле"
+                                                autocomplete="off" type="password" name="form[]" placeholder="Пароль">
+                                            <div class="form__viewpass">
+                                                <img class="eye1" loading="lazy" src="../img/icon/eye2.svg" alt="">
+                                                <img class="eye2" loading="lazy" src="../img/icon/eye1.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="form__input password-confirm">
+                                            <input data-validate="password-confirm" data-required
+                                                data-error="Пароль не совпадает" autocomplete="off" type="password"
+                                                name="form[]" placeholder="Повторите пароль">
+                                            <div class="form__viewpass">
+                                                <img class="eye1" loading="lazy" src="../img/icon/eye2.svg" alt="">
+                                                <img class="eye2" loading="lazy" src="../img/icon/eye1.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="form__btn btn btn-big">
+                                        <span>Регистрация</span>
+                                    </button>
+                                    <p>
+                                        Нажимая на кнопку “Регистрация” вы соглашаетесь с <a href="#">
+                                            политикой
+                                            конфиденциальности
+                                        </a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="forgot-password" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div data-close class="popup__close">
+                <img loading="lazy" src="img/icon/close2.svg" alt="">
+            </div>
+            <div class="popup__shadow figure-shadow">
+                <img loading="lazy" src="img/shadow1.webp" alt="">
+            </div>
+            <div class="popup__figure figure">
+                <img loading="lazy" src="img/figure6.webp" alt="">
+            </div>
+            <div class="popup__body popup-other">
+                <form action="#" class="form">
+                    <div class="form__content">
+                        <div class="form__top">
+                            <div class="form__title">
+                                Забыли пароль?
+                            </div>
+                            <div class="form__subtitle">
+                                Оставьте ваш email и новый пароль прийдет на почту
+                            </div>
+                        </div>
+                        <div class="form__inputs">
+                            <div class="form__input">
+                                <input data-required="email" autocomplete="off" type="text" name="form[]"
+                                    data-error="Обязательное поле" placeholder="Email" class="input">
+                            </div>
+                        </div>
+                        <button type="submit" class="form__btn btn btn-big">
+                            <span>Отправить</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="send-configuration" aria-hidden="true" class="popup send-configuration-popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div data-close class="popup__close">
+                <img loading="lazy" src="img/icon/close2.svg" alt="">
+            </div>
+            <div class="popup__shadow figure-shadow">
+                <img loading="lazy" src="img/shadow1.webp" alt="">
+            </div>
+            <div class="popup__figure figure">
+                <img loading="lazy" src="img/figure6.webp" alt="">
+            </div>
+            <div class="popup__body popup-other">
+                <form action="#" class="form">
+                    <div class="form__content">
+                        <div class="form__top">
+                            <div class="form__title">
+                                Отправить конфигурацию на email
+                            </div>
+                        </div>
+                        <div class="form__inputs">
+                            <div class="form__input">
+                                <input data-required="email" autocomplete="off" type="text" name="form[]"
+                                    data-error="Обязательное поле" placeholder="Email" class="input">
+                            </div>
+                        </div>
+                        <button type="submit" class="form__btn btn btn-big">
+                            <span>Отправить</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="thanks" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div data-close class="popup__close">
+                <img loading="lazy" src="img/icon/close2.svg" alt="">
+            </div>
+            <div class="popup__shadow figure-shadow">
+                <img loading="lazy" src="img/shadow1.webp" alt="">
+            </div>
+            <div class="popup__figure figure">
+                <img loading="lazy" src="img/figure6.webp" alt="">
+            </div>
+            <div class="popup__body popup-other">
+                <div class="form">
+                    <div class="form__content">
+                        <div class="form__top">
+                            <img loading="lazy" src="img/icon/check2.svg" alt="" class="form__pic">
+                            <div class="form__title">
+                                Спасибо за заказ
+                            </div>
+                        </div>
+                        <div class="form__btn btn btn-big">
+                            <span>Вернуться на главную</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="save" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div data-close class="popup__close">
+                <img loading="lazy" src="img/icon/close2.svg" alt="">
+            </div>
+            <div class="popup__shadow figure-shadow">
+                <img loading="lazy" src="img/shadow1.webp" alt="">
+            </div>
+            <div class="popup__figure figure">
+                <img loading="lazy" src="img/figure6.webp" alt="">
+            </div>
+            <div class="popup__body popup-other">
+                <div class="form">
+                    <div class="form__content">
+                        <div class="form__top">
+                            <div class="form__title">
+                                Сохранить
+                            </div>
+                            <div class="form__info">
+                                <div class="form__icon">
+                                    <img src="img/icon/check1.svg" alt="">
+                                </div>
+                                <span>Сборка успешно сохранена</span>
+                            </div>
+                        </div>
+                        <div class="form__inputs">
+                            <div class="form__copy-text">Скопируйте полученную ссылку:</div>
+                            <div class="form__copy">
+                                <span>https://28bit.ru/assembly/086932f21https://28bit.ru/assembly/086932f21</span>
+                            </div>
+                        </div>
+                        <button type="button" class="form__btn btn copy-btn">
+                            <span>Скопировать</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="products" aria-hidden="true" class="popup products-popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div data-close class="popup__close">
+                <img loading="lazy" src="img/icon/close2.svg" alt="">
+            </div>
+            <div class="popup__shadow figure-shadow">
+                <img loading="lazy" src="img/shadow1.webp" alt="">
+            </div>
+            <div class="popup__figure figure">
+                <img loading="lazy" src="img/figure6.webp" alt="">
+            </div>
+            <div class="popup__body popup-other">
+                <div class="form">
+                    <div class="form__content">
+                        <div class="form__top">
+                            <div class="form__title">
+                                Накопители SSD M2
+                            </div>
+                        </div>
+                        <div class="form__body">
+                            <div data-simplebar class="form__simplebar">
+                                <div class="form__products">
+                                    <div class="form__column">
+                                        <div class="right-configurator__descr">
+                                            <img src="img/products/image30.webp" alt=""
+                                                class="right-configurator__pic2">
+                                            <div class="right-configurator__item">
+                                                <a href="#" class="right-configurator__left">
+                                                    <div class="right-configurator__descr-title">
+                                                        Твердотельный накопитель NETAC 1000 Gb
+                                                        NT01NV7000-1TO-E4X
+                                                    </div>
+                                                    <div class="right-configurator__atricle">
+                                                        <span>Артикул</span>
+                                                        53710
+                                                    </div>
+                                                </a>
+                                                <div class="right-configurator__price">
+                                                    7 530
+                                                    <img src="img/icon/ruble.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-circle">
+                                            <img src="img/icon/plus2.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="right-configurator__descr">
+                                            <img src="img/products/image30.webp" alt=""
+                                                class="right-configurator__pic2">
+                                            <div class="right-configurator__item">
+                                                <a href="#" class="right-configurator__left">
+                                                    <div class="right-configurator__descr-title">
+                                                        Твердотельный накопитель NETAC 1000 Gb
+                                                        NT01NV7000-1TO-E4X
+                                                    </div>
+                                                    <div class="right-configurator__atricle">
+                                                        <span>Артикул</span>
+                                                        53710
+                                                    </div>
+                                                </a>
+                                                <div class="right-configurator__price">
+                                                    7 530
+                                                    <img src="img/icon/ruble.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-circle">
+                                            <img src="img/icon/plus2.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="right-configurator__descr">
+                                            <img src="img/products/image30.webp" alt=""
+                                                class="right-configurator__pic2">
+                                            <div class="right-configurator__item">
+                                                <a href="#" class="right-configurator__left">
+                                                    <div class="right-configurator__descr-title">
+                                                        Твердотельный накопитель NETAC 1000 Gb
+                                                        NT01NV7000-1TO-E4X
+                                                    </div>
+                                                    <div class="right-configurator__atricle">
+                                                        <span>Артикул</span>
+                                                        53710
+                                                    </div>
+                                                </a>
+                                                <div class="right-configurator__price">
+                                                    7 530
+                                                    <img src="img/icon/ruble.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-circle">
+                                            <img src="img/icon/plus2.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="right-configurator__descr">
+                                            <img src="img/products/image30.webp" alt=""
+                                                class="right-configurator__pic2">
+                                            <div class="right-configurator__item">
+                                                <a href="#" class="right-configurator__left">
+                                                    <div class="right-configurator__descr-title">
+                                                        Твердотельный накопитель NETAC 1000 Gb
+                                                        NT01NV7000-1TO-E4X
+                                                    </div>
+                                                    <div class="right-configurator__atricle">
+                                                        <span>Артикул</span>
+                                                        53710
+                                                    </div>
+                                                </a>
+                                                <div class="right-configurator__price">
+                                                    7 530
+                                                    <img src="img/icon/ruble.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-circle">
+                                            <img src="img/icon/plus2.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="right-configurator__descr">
+                                            <img src="img/products/image30.webp" alt=""
+                                                class="right-configurator__pic2">
+                                            <div class="right-configurator__item">
+                                                <a href="#" class="right-configurator__left">
+                                                    <div class="right-configurator__descr-title">
+                                                        Твердотельный накопитель NETAC 1000 Gb
+                                                        NT01NV7000-1TO-E4X
+                                                    </div>
+                                                    <div class="right-configurator__atricle">
+                                                        <span>Артикул</span>
+                                                        53710
+                                                    </div>
+                                                </a>
+                                                <div class="right-configurator__price">
+                                                    7 530
+                                                    <img src="img/icon/ruble.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-circle">
+                                            <img src="img/icon/plus2.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="right-configurator__descr">
+                                            <img src="img/products/image30.webp" alt=""
+                                                class="right-configurator__pic2">
+                                            <div class="right-configurator__item">
+                                                <a href="#" class="right-configurator__left">
+                                                    <div class="right-configurator__descr-title">
+                                                        Твердотельный накопитель NETAC 1000 Gb
+                                                        NT01NV7000-1TO-E4X
+                                                    </div>
+                                                    <div class="right-configurator__atricle">
+                                                        <span>Артикул</span>
+                                                        53710
+                                                    </div>
+                                                </a>
+                                                <div class="right-configurator__price">
+                                                    7 530
+                                                    <img src="img/icon/ruble.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-circle">
+                                            <img src="img/icon/plus2.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="right-configurator__descr">
+                                            <img src="img/products/image30.webp" alt=""
+                                                class="right-configurator__pic2">
+                                            <div class="right-configurator__item">
+                                                <a href="#" class="right-configurator__left">
+                                                    <div class="right-configurator__descr-title">
+                                                        Твердотельный накопитель NETAC 1000 Gb
+                                                        NT01NV7000-1TO-E4X
+                                                    </div>
+                                                    <div class="right-configurator__atricle">
+                                                        <span>Артикул</span>
+                                                        53710
+                                                    </div>
+                                                </a>
+                                                <div class="right-configurator__price">
+                                                    7 530
+                                                    <img src="img/icon/ruble.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-circle">
+                                            <img src="img/icon/plus2.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="right-configurator__descr">
+                                            <img src="img/products/image30.webp" alt=""
+                                                class="right-configurator__pic2">
+                                            <div class="right-configurator__item">
+                                                <a href="#" class="right-configurator__left">
+                                                    <div class="right-configurator__descr-title">
+                                                        Твердотельный накопитель NETAC 1000 Gb
+                                                        NT01NV7000-1TO-E4X
+                                                    </div>
+                                                    <div class="right-configurator__atricle">
+                                                        <span>Артикул</span>
+                                                        53710
+                                                    </div>
+                                                </a>
+                                                <div class="right-configurator__price">
+                                                    7 530
+                                                    <img src="img/icon/ruble.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-circle">
+                                            <img src="img/icon/plus2.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="right-configurator__descr">
+                                            <img src="img/products/image30.webp" alt=""
+                                                class="right-configurator__pic2">
+                                            <div class="right-configurator__item">
+                                                <a href="#" class="right-configurator__left">
+                                                    <div class="right-configurator__descr-title">
+                                                        Твердотельный накопитель NETAC 1000 Gb
+                                                        NT01NV7000-1TO-E4X
+                                                    </div>
+                                                    <div class="right-configurator__atricle">
+                                                        <span>Артикул</span>
+                                                        53710
+                                                    </div>
+                                                </a>
+                                                <div class="right-configurator__price">
+                                                    7 530
+                                                    <img src="img/icon/ruble.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-circle">
+                                            <img src="img/icon/plus2.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="right-configurator__descr">
+                                            <img src="img/products/image30.webp" alt=""
+                                                class="right-configurator__pic2">
+                                            <div class="right-configurator__item">
+                                                <a href="#" class="right-configurator__left">
+                                                    <div class="right-configurator__descr-title">
+                                                        Твердотельный накопитель NETAC 1000 Gb
+                                                        NT01NV7000-1TO-E4X
+                                                    </div>
+                                                    <div class="right-configurator__atricle">
+                                                        <span>Артикул</span>
+                                                        53710
+                                                    </div>
+                                                </a>
+                                                <div class="right-configurator__price">
+                                                    7 530
+                                                    <img src="img/icon/ruble.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-circle">
+                                            <img src="img/icon/plus2.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="right-configurator__descr">
+                                            <img src="img/products/image30.webp" alt=""
+                                                class="right-configurator__pic2">
+                                            <div class="right-configurator__item">
+                                                <a href="#" class="right-configurator__left">
+                                                    <div class="right-configurator__descr-title">
+                                                        Твердотельный накопитель NETAC 1000 Gb
+                                                        NT01NV7000-1TO-E4X
+                                                    </div>
+                                                    <div class="right-configurator__atricle">
+                                                        <span>Артикул</span>
+                                                        53710
+                                                    </div>
+                                                </a>
+                                                <div class="right-configurator__price">
+                                                    7 530
+                                                    <img src="img/icon/ruble.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-circle">
+                                            <img src="img/icon/plus2.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

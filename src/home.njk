@@ -121,9 +121,9 @@
 						</div>
 					</div>
 					<div class="block-intro__bottom bottom-block-intro">
-						<div class="bottom-block-intro__circle"></div>
 						<div class="bottom-block-intro__body">
-							<div class="bottom-block-intro__column">
+							<a href="#" class="bottom-block-intro__column">
+								<div class="bottom-block-intro__circle"><span></span></div>
 								<img class="bottom-block-intro__bg" src="img/bg4.webp" alt="">
 								<div class="bottom-block-intro__item">
 									<div class="bottom-block-intro__title">Trade-In</div>
@@ -132,8 +132,11 @@
 									</p>
 								</div>
 								<img class="bottom-block-intro__pic" src="img/image1.webp" alt="">
-							</div>
-							<div class="bottom-block-intro__column">
+							</a>
+							<a href="#" class="bottom-block-intro__column">
+								<div class="bottom-block-intro__circle">
+									<span></span>
+								</div>
 								<img class="bottom-block-intro__bg bg2" src="img/bg1.webp" alt="">
 								<div class="bottom-block-intro__item">
 									<div class="bottom-block-intro__title">Сервис</div>
@@ -143,7 +146,7 @@
 									</p>
 								</div>
 								<img class="bottom-block-intro__pic pic2" src="img/image2.webp" alt="">
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -162,7 +165,7 @@
 							</div>
 						</div>
 						<div class="top-block-choose__content">
-							<div class="top-block-choose__column">
+							<a href="#" class="top-block-choose__column">
 								<div class="top-block-choose__shadow figure-shadow">
 									<img loading="lazy" src="img/shadow1.webp" alt="">
 								</div>
@@ -179,13 +182,13 @@
 									<div class="top-block-choose__subtitle">
 										ПК с доставкой сегодня
 									</div>
-									<a href="#" class="btn"><span>Выбрать</span></a>
+									<div class="btn"><span>Выбрать</span></div>
 								</div>
 								<div class="top-block-choose__image">
 									<img loading="lazy" src="img/products/image11.webp" alt="">
 								</div>
-							</div>
-							<div class="top-block-choose__column">
+							</a>
+							<a href="#" class="top-block-choose__column">
 								<div class="top-block-choose__shadow figure-shadow">
 									<img loading="lazy" src="img/shadow1.webp" alt="">
 								</div>
@@ -202,13 +205,13 @@
 									<div class="top-block-choose__subtitle">
 										Собрать мощный компьютер
 									</div>
-									<a href="#" class="btn"><span>Конфигурировать</span></a>
+									<div class="btn"><span>Конфигурировать</span></div>
 								</div>
 								<div class="top-block-choose__image">
 									<img loading="lazy" src="img/products/image12.webp" alt="">
 								</div>
-							</div>
-							<div class="top-block-choose__column">
+							</a>
+							<a href="#" class="top-block-choose__column">
 								<div class="top-block-choose__shadow figure-shadow">
 									<img loading="lazy" src="img/shadow1.webp" alt="">
 								</div>
@@ -225,12 +228,12 @@
 									<div class="top-block-choose__subtitle">
 										Подобрать по параметрам
 									</div>
-									<a href="#" class="btn"><span>Подобрать</span></a>
+									<div class="btn"><span>Подобрать</span></div>
 								</div>
 								<div class="top-block-choose__image">
 									<img loading="lazy" src="img/products/image13.webp" alt="">
 								</div>
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -425,7 +428,7 @@
 									лучшую производительность за свой бюджет
 								</p>
 								<div class="socials">
-									<a href="#">
+									<a href="#" class="telegram">
 										<span>Написать в telegram</span>
 										<img src="img/icon/telegram.svg" alt="">
 									</a>
@@ -1174,7 +1177,9 @@
 		</main>
 		{% include 'blocks/footer.njk' %}
 	</div>
+	{% include 'blocks/popups.njk' %}
 	{% include 'blocks/scripts.njk' %}
+
 </body>
 
 </html>

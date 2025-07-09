@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Подобрать компьютер</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header.njk' %}
+        <main class="main">
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <div class="breadcrumbs__content">
+                        <ul>
+                            <li><a href="#"><img src="img/icon/home.svg" alt=""></a></li>
+                            <li><span>- Подобрать компьютер</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-choose-computer">
+                <div class="container">
+                    <div class="block-choose-computer__content">
+                        <div class="heading-complex">
+                            <div class="heading-complex__content">
+                                <h1 class="title1">
+                                    <span>Конфигуратор</span>
+                                </h1>
+                                <p>
+                                    Мы знаем, насколько непонятными могут быть рекомендованные системные требования для
+                                    последних игр. Эта страница поможет вам, предоставив компьютеры, которые подойдут
+                                    для
+                                    любой современной игры!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tabs-choose-computer">
+                            <nav class="tabs-choose-computer__navigation">
+                                <select name="form[]" class="select">
+                                    <option data-tabs-select="game" value="1" data-image="img/products/image22.webp"
+                                        selected>Для
+                                        игр
+                                    </option>
+                                    <option data-tabs-select="work" value="2" data-image="img/products/image23.webp">Для
+                                        работы
+                                    </option>
+                                    <option data-tabs-select="parameters" value="3"
+                                        data-image="img/products/image13.webp">По
+                                        параметрам
+                                    </option>
+                                </select>
+                                <button data-tabs-select="game" type="button"
+                                    class="tabs-choose-computer__title tabs-main-title">
+                                    <div class="tabs-choose-computer__item">
+                                        <div class="tabs-choose-computer__shadow figure-shadow">
+                                            <img loading="lazy" src="img/shadow4.webp" alt="">
+                                        </div>
+                                        <div class="tabs-choose-computer__figure figure">
+                                            <img class="figure-def" loading="lazy" src="img/figure5.webp" alt="">
+                                            <img class="figure-bg" src="img/figure-bg.webp" alt="">
+                                        </div>
+                                        <div class="tabs-choose-computer__image">
+                                            <img src="img/products/image22.webp" alt="">
+                                        </div>
+                                        <span>Для игр</span>
+                                    </div>
+                                </button>
+                                <button data-tabs-select="work" type="button"
+                                    class="tabs-choose-computer__title tabs-main-title">
+                                    <div class="tabs-choose-computer__item">
+                                        <div class="tabs-choose-computer__shadow figure-shadow">
+                                            <img loading="lazy" src="img/shadow4.webp" alt="">
+                                        </div>
+                                        <div class="tabs-choose-computer__figure figure">
+                                            <img class="figure-def" loading="lazy" src="img/figure5.webp" alt="">
+                                            <img class="figure-bg" src="img/figure-bg.webp" alt="">
+                                        </div>
+                                        <div class="tabs-choose-computer__image">
+                                            <img src="img/products/image23.webp" alt="">
+                                        </div>
+                                        <span>Для работы</span>
+                                    </div>
+                                </button>
+                                <button data-tabs-select="parameters" type="button"
+                                    class="tabs-choose-computer__title tabs-main-title">
+                                    <div class="tabs-choose-computer__item">
+                                        <div class="tabs-choose-computer__shadow figure-shadow">
+                                            <img loading="lazy" src="img/shadow4.webp" alt="">
+                                        </div>
+                                        <div class="tabs-choose-computer__figure figure">
+                                            <img class="figure-def" loading="lazy" src="img/figure5.webp" alt="">
+                                            <img class="figure-bg" src="img/figure-bg.webp" alt="">
+                                        </div>
+                                        <div class="tabs-choose-computer__image">
+                                            <img src="img/products/image13.webp" alt="">
+                                        </div>
+                                        <span>По параметрам</span>
+                                    </div>
+                                </button>
+                                <img src="img/icon/arrow1.svg" alt="" class="tabs-choose-computer__arrow">
+                            </nav>
+                            <div class="tabs-choose-computer__content">
+                                <div data-tabs-select="game" class="tabs-choose-computer__body">
+                                    <div class=" tabs-choose-computer__tabs2">
+                                        <h2 class="title2">
+                                            <span>Выберите</span> разрешение монитора
+                                        </h2>
+                                        <nav class="tabs-choose-computer__navigation">
+                                            <select name="form[2]" class="select">
+                                                <option data-tabs-select2="fullhd" value="1" selected>FullHD (1920x1080)
+                                                </option>
+                                                <option data-tabs-select2="2K" value="2">
+                                                    2K (2560x1440)
+                                                </option>
+                                                <option data-tabs-select2="4K" value="3">
+                                                    4K (3840x2160)
+                                                </option>
+                                            </select>
+                                            <button data-tabs-select2="fullhd" type="button"
+                                                class="tabs-choose-computer__title tabs-main-title ">
+                                                <div class="tabs-choose-computer__item">
+                                                    <span>FullHD (1920x1080)</span>
+                                                </div>
+                                            </button>
+                                            <button data-tabs-select2="2K" type="button"
+                                                class="tabs-choose-computer__title tabs-main-title ">
+                                                <div class="tabs-choose-computer__item">
+                                                    <span>2K (2560x1440)</span>
+                                                </div>
+                                            </button>
+                                            <button data-tabs-select2="4K" type="button"
+                                                class="tabs-choose-computer__title tabs-main-title ">
+                                                <div class="tabs-choose-computer__item">
+                                                    <span>4K (3840x2160)</span>
+                                                </div>
+                                            </button>
+                                            <img src="img/icon/arrow1.svg" alt="" class="tabs-choose-computer__arrow">
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div data-tabs-select="work" class="tabs-choose-computer__body">
+                                    Содержимое таба
+                                </div>
+                                <div data-tabs-select="parameters" class="tabs-choose-computer__body">
+                                    Содержимое таба
+                                </div>
+                            </div>
+                            <div class="tabs-choose-computer__content">
+                                <div data-tabs-select2="fullhd" class="tabs-choose-computer__body">
+                                    <div class="tabs-choose-computer__tabs2 tabs3">
+                                        <h2 class="title2">
+                                            <span>Выберите</span> любимую игру
+                                        </h2>
+                                        <nav class="tabs-choose-computer__navigation">
+                                            <button data-tabs-select3="game1" type="button"
+                                                class="tabs-choose-computer__title">
+                                                <div class="tabs-choose-computer__item">
+                                                    <img loading="lazy" src="img/games/image9.webp" alt=""
+                                                        class="tabs-choose-computer__pic">
+                                                    <span>BattIefield 2042</span>
+                                                </div>
+                                            </button>
+                                            <button data-tabs-select3="game2" type="button"
+                                                class="tabs-choose-computer__title">
+                                                <div class="tabs-choose-computer__item">
+                                                    <img loading="lazy" src="img/games/image10.webp" alt=""
+                                                        class="tabs-choose-computer__pic">
+                                                    <span>Counter-Strike 2</span>
+                                                </div>
+                                            </button>
+                                            <button data-tabs-select3="game3" type="button"
+                                                class="tabs-choose-computer__title ">
+                                                <div class="tabs-choose-computer__item">
+                                                    <img loading="lazy" src="img/games/image11.webp" alt=""
+                                                        class="tabs-choose-computer__pic">
+                                                    <span>Dota 2</span>
+                                                </div>
+                                            </button>
+                                            <button data-tabs-select3="game4" type="button"
+                                                class="tabs-choose-computer__title ">
+                                                <div class="tabs-choose-computer__item">
+                                                    <img loading="lazy" src="img/games/image12.webp" alt=""
+                                                        class="tabs-choose-computer__pic">
+                                                    <span>Fortnite</span>
+                                                </div>
+                                            </button>
+                                            <button data-tabs-select3="game5" type="button"
+                                                class="tabs-choose-computer__title ">
+                                                <div class="tabs-choose-computer__item">
+                                                    <img loading="lazy" src="img/games/image13.webp" alt=""
+                                                        class="tabs-choose-computer__pic">
+                                                    <span>GTA 5</span>
+                                                </div>
+                                            </button>
+                                            <button data-tabs-select3="game6" type="button"
+                                                class="tabs-choose-computer__title ">
+                                                <div class="tabs-choose-computer__item">
+                                                    <img loading="lazy" src="img/games/image14.webp" alt=""
+                                                        class="tabs-choose-computer__pic">
+                                                    <span>League of Legends</span>
+                                                </div>
+                                            </button>
+                                            <button data-tabs-select3="game7" type="button"
+                                                class="tabs-choose-computer__title ">
+                                                <div class="tabs-choose-computer__item">
+                                                    <img loading="lazy" src="img/games/image15.webp" alt=""
+                                                        class="tabs-choose-computer__pic">
+                                                    <span>Minecraft</span>
+                                                </div>
+                                            </button>
+                                            <button data-tabs-select3="game8" type="button"
+                                                class="tabs-choose-computer__title ">
+                                                <div class="tabs-choose-computer__item">
+                                                    <img loading="lazy" src="img/games/image16.webp" alt=""
+                                                        class="tabs-choose-computer__pic">
+                                                    <span>PUBG</span>
+                                                </div>
+                                            </button>
+                                            <img src="img/icon/arrow1.svg" alt="" class="tabs-choose-computer__arrow">
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div data-tabs-select2="2K" class="tabs-choose-computer__body">
+                                </div>
+                                <div data-tabs-select2="4K" class="tabs-choose-computer__body"></div>
+                            </div>
+                            <div class="tabs-choose-computer__content">
+                                <div data-tabs-select3="game1" class="tabs-choose-computer__body">
+                                    <h2 class="title2">
+                                        <span>Компьютеры для</span> Counter-Strike 2
+                                    </h2>
+                                    <div class="block-products__content block-products2">
+                                        <div class="block-products__slider block-products-slider2 swiper">
+                                            <div class="block-products__wrapper swiper-wrapper">
+                                                <div class="block-products__slide swiper-slide">
+                                                    <div class="block-products__items">
+                                                        <div class="block-products__bg">
+                                                        </div>
+                                                        <div class="block-products__images images-block-products">
+                                                            <div class="images-block-products__slide">
+                                                                <img loading="lazy" class="option-pic"
+                                                                    src="img/products/image43.webp" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-products__center center-block-products">
+                                                            <div class="options">
+                                                                <div class="options__item _active">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image43.webp"
+                                                                        id="o_1" class="options__input options-image"
+                                                                        checked type="radio" value="1" name="option">
+                                                                    <label for="o_1" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #000;"></span>
+                                                                        </span>
+                                                                        <span class="options__text">Черный</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image2.webp"
+                                                                        id="o_2" class="options__input options-image"
+                                                                        type="radio" value="2" name="option">
+                                                                    <label for="o_2" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #f5f5f5;">
+                                                                                <span style="background-color: #000;"
+                                                                                    class="two-colors"></span>
+                                                                            </span>
+
+                                                                        </span>
+                                                                        <span class="options__text">Черно-белый</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image3.webp"
+                                                                        id="o_3" class="options__input options-image"
+                                                                        type="radio" value="3" name="option">
+                                                                    <label for="o_3" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #f5f5f5;"></span>
+                                                                        </span>
+                                                                        <span class="options__text">Белый</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image4.webp"
+                                                                        id="o_4" class="options__input options-image"
+                                                                        type="radio" value="4" name="option">
+                                                                    <label for="o_4" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #219fce;">
+                                                                            </span>
+                                                                        </span>
+                                                                        <span class="options__text">Синий</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="center-block-products__fps">
+                                                                <div class="center-block-products__images">
+                                                                    <img src="img/icon/arc.svg" alt="">
+                                                                    <span>
+                                                                        286
+                                                                        <br>
+                                                                        FPS
+                                                                    </span>
+                                                                </div>
+                                                                <div class="center-block-products__text">
+                                                                    <div class="center-block-products__title">
+                                                                        Counter-Strike 2
+                                                                    </div>
+                                                                    <p>Ультра-настройки,
+                                                                        FullHD</p>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <button type="button">
+                                                                        <img src="img/icon/info.svg" alt="">
+                                                                    </button>
+                                                                    <div class="info__content">
+                                                                        <p>
+                                                                            Lorem ipsum
+                                                                            dolor sit
+                                                                            amet
+                                                                            consectetur,
+                                                                            adipisicing
+                                                                            elit.
+                                                                            Totam, cum
+                                                                            vitae
+                                                                            temporibus
+                                                                            numquam, aut
+                                                                            inventore
+                                                                            placeat
+                                                                            facilis
+                                                                            alias
+                                                                            soluta vel
+                                                                            ipsa.
+                                                                            A,
+                                                                            corrupti
+                                                                            dignissimos!
+                                                                            Repellat
+                                                                            odio minus
+                                                                            rerum
+                                                                            veritatis
+                                                                            provident?
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-products__item item-block-products">
+                                                            <div class="item-block-products__top">
+                                                                <div class="item-block-products__stock">
+                                                                    Есть в наличии:
+                                                                    <span>2</span>
+                                                                </div>
+                                                                <a href="#" class="item-block-products__title">
+                                                                    Игровой компьютер i5
+                                                                    14600KF + RTX4070Ti
+                                                                    Super
+                                                                </a>
+                                                                <div class="item-block-products__prices">
+                                                                    <div class="item-block-products__column sale-price">
+                                                                        <div class="item-block-products__name">
+                                                                            Цена по
+                                                                            акции
+                                                                        </div>
+                                                                        <div class="item-block-products__summ">
+                                                                            192 200
+                                                                            <img loading="lazy" src="img/icon/ruble.svg"
+                                                                                alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item-block-products__column">
+                                                                        <div class="item-block-products__name">
+                                                                            Розничная
+                                                                            цена
+                                                                        </div>
+                                                                        <div class="item-block-products__summ">
+                                                                            198 500
+                                                                            <img loading="lazy" src="img/icon/ruble.svg"
+                                                                                alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-block-products__bottom">
+                                                                <div class="item-block-products__buttons">
+                                                                    <div data-quantity class="quantity">
+                                                                        <button data-quantity-minus type="button"
+                                                                            class="quantity__button quantity__button_minus"></button>
+                                                                        <div class="quantity__input">
+                                                                            <input data-quantity-value
+                                                                                autocomplete="off" type="text"
+                                                                                name="form[]" value="1">
+                                                                        </div>
+                                                                        <button data-quantity-plus type="button"
+                                                                            class="quantity__button quantity__button_plus"></button>
+                                                                    </div>
+                                                                    <a href="#" class="btn">
+                                                                        <img class="img-cart" src="img/icon/cart.svg"
+                                                                            alt="">
+                                                                        <span>
+                                                                            В корзину
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="block-products__slide swiper-slide">
+                                                    <div class="block-products__items">
+                                                        <div class="block-products__bg">
+                                                        </div>
+                                                        <div class="block-products__images images-block-products">
+                                                            <div class="images-block-products__slide">
+                                                                <img loading="lazy" class="option-pic"
+                                                                    src="img/products/image43.webp" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-products__center center-block-products">
+                                                            <div class="options">
+                                                                <div class="options__item _active">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image43.webp"
+                                                                        id="o_11" class="options__input options-image"
+                                                                        checked type="radio" value="11" name="option2">
+                                                                    <label for="o_11" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #000;"></span>
+                                                                        </span>
+                                                                        <span class="options__text">Черный</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image2.webp"
+                                                                        id="o_12" class="options__input options-image"
+                                                                        type="radio" value="12" name="option2">
+                                                                    <label for="o_12" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #f5f5f5;">
+                                                                                <span style="background-color: #000;"
+                                                                                    class="two-colors"></span>
+                                                                            </span>
+
+                                                                        </span>
+                                                                        <span class="options__text">Черно-белый</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image3.webp"
+                                                                        id="o_13" class="options__input options-image"
+                                                                        type="radio" value="13" name="option2">
+                                                                    <label for="o_13" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #f5f5f5;"></span>
+                                                                        </span>
+                                                                        <span class="options__text">Белый</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image4.webp"
+                                                                        id="o_14" class="options__input options-image"
+                                                                        type="radio" value="14" name="option2">
+                                                                    <label for="o_14" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #219fce;">
+                                                                            </span>
+                                                                        </span>
+                                                                        <span class="options__text">Синий</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="center-block-products__fps">
+                                                                <div class="center-block-products__images">
+                                                                    <img src="img/icon/arc.svg" alt="">
+                                                                    <span>
+                                                                        286
+                                                                        <br>
+                                                                        FPS
+                                                                    </span>
+                                                                </div>
+                                                                <div class="center-block-products__text">
+                                                                    <div class="center-block-products__title">
+                                                                        Counter-Strike 2
+                                                                    </div>
+                                                                    <p>Ультра-настройки,
+                                                                        FullHD</p>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <button type="button">
+                                                                        <img src="img/icon/info.svg" alt="">
+                                                                    </button>
+                                                                    <div class="info__content">
+                                                                        <p>
+                                                                            Lorem ipsum
+                                                                            dolor sit
+                                                                            amet
+                                                                            consectetur,
+                                                                            adipisicing
+                                                                            elit.
+                                                                            Totam, cum
+                                                                            vitae
+                                                                            temporibus
+                                                                            numquam, aut
+                                                                            inventore
+                                                                            placeat
+                                                                            facilis
+                                                                            alias
+                                                                            soluta vel
+                                                                            ipsa.
+                                                                            A,
+                                                                            corrupti
+                                                                            dignissimos!
+                                                                            Repellat
+                                                                            odio minus
+                                                                            rerum
+                                                                            veritatis
+                                                                            provident?
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-products__item item-block-products">
+                                                            <div class="item-block-products__top">
+                                                                <div class="item-block-products__stock">
+                                                                    Есть в наличии:
+                                                                    <span>2</span>
+                                                                </div>
+                                                                <a href="#" class="item-block-products__title">
+                                                                    Игровой компьютер i5
+                                                                    14600KF + RTX4070Ti
+                                                                    Super
+                                                                </a>
+                                                                <div class="item-block-products__prices">
+                                                                    <div class="item-block-products__column sale-price">
+                                                                        <div class="item-block-products__name">
+                                                                            Цена по
+                                                                            акции
+                                                                        </div>
+                                                                        <div class="item-block-products__summ">
+                                                                            192 200
+                                                                            <img loading="lazy" src="img/icon/ruble.svg"
+                                                                                alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item-block-products__column">
+                                                                        <div class="item-block-products__name">
+                                                                            Розничная
+                                                                            цена
+                                                                        </div>
+                                                                        <div class="item-block-products__summ">
+                                                                            198 500
+                                                                            <img loading="lazy" src="img/icon/ruble.svg"
+                                                                                alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-block-products__bottom">
+                                                                <div class="item-block-products__buttons">
+                                                                    <div data-quantity class="quantity">
+                                                                        <button data-quantity-minus type="button"
+                                                                            class="quantity__button quantity__button_minus"></button>
+                                                                        <div class="quantity__input">
+                                                                            <input data-quantity-value
+                                                                                autocomplete="off" type="text"
+                                                                                name="form[]" value="1">
+                                                                        </div>
+                                                                        <button data-quantity-plus type="button"
+                                                                            class="quantity__button quantity__button_plus"></button>
+                                                                    </div>
+                                                                    <a href="#" class="btn">
+                                                                        <img class="img-cart" src="img/icon/cart.svg"
+                                                                            alt="">
+                                                                        <span>
+                                                                            В корзину
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="block-products__slide swiper-slide">
+                                                    <div class="block-products__items">
+                                                        <div class="block-products__bg">
+                                                        </div>
+                                                        <div class="block-products__images images-block-products">
+                                                            <div class="images-block-products__slide">
+                                                                <img loading="lazy" class="option-pic"
+                                                                    src="img/products/image43.webp" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-products__center center-block-products">
+                                                            <div class="options">
+                                                                <div class="options__item _active">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image43.webp"
+                                                                        id="o_15" class="options__input options-image"
+                                                                        checked type="radio" value="15" name="option3">
+                                                                    <label for="o_15" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #000;"></span>
+                                                                        </span>
+                                                                        <span class="options__text">Черный</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image2.webp"
+                                                                        id="o_16" class="options__input options-image"
+                                                                        type="radio" value="16" name="option3">
+                                                                    <label for="o_16" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #f5f5f5;">
+                                                                                <span style="background-color: #000;"
+                                                                                    class="two-colors"></span>
+                                                                            </span>
+
+                                                                        </span>
+                                                                        <span class="options__text">Черно-белый</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image3.webp"
+                                                                        id="o_17" class="options__input options-image"
+                                                                        type="radio" value="17" name="option3">
+                                                                    <label for="o_17" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #f5f5f5;"></span>
+                                                                        </span>
+                                                                        <span class="options__text">Белый</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image4.webp"
+                                                                        id="o_18" class="options__input options-image"
+                                                                        type="radio" value="18" name="option3">
+                                                                    <label for="o_18" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #219fce;">
+                                                                            </span>
+                                                                        </span>
+                                                                        <span class="options__text">Синий</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="center-block-products__fps">
+                                                                <div class="center-block-products__images">
+                                                                    <img src="img/icon/arc.svg" alt="">
+                                                                    <span>
+                                                                        286
+                                                                        <br>
+                                                                        FPS
+                                                                    </span>
+                                                                </div>
+                                                                <div class="center-block-products__text">
+                                                                    <div class="center-block-products__title">
+                                                                        Counter-Strike 2
+                                                                    </div>
+                                                                    <p>Ультра-настройки,
+                                                                        FullHD</p>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <button type="button">
+                                                                        <img src="img/icon/info.svg" alt="">
+                                                                    </button>
+                                                                    <div class="info__content">
+                                                                        <p>
+                                                                            Lorem ipsum
+                                                                            dolor sit
+                                                                            amet
+                                                                            consectetur,
+                                                                            adipisicing
+                                                                            elit.
+                                                                            Totam, cum
+                                                                            vitae
+                                                                            temporibus
+                                                                            numquam, aut
+                                                                            inventore
+                                                                            placeat
+                                                                            facilis
+                                                                            alias
+                                                                            soluta vel
+                                                                            ipsa.
+                                                                            A,
+                                                                            corrupti
+                                                                            dignissimos!
+                                                                            Repellat
+                                                                            odio minus
+                                                                            rerum
+                                                                            veritatis
+                                                                            provident?
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-products__item item-block-products">
+                                                            <div class="item-block-products__top">
+                                                                <div class="item-block-products__stock">
+                                                                    Есть в наличии:
+                                                                    <span>2</span>
+                                                                </div>
+                                                                <a href="#" class="item-block-products__title">
+                                                                    Игровой компьютер i5
+                                                                    14600KF + RTX4070Ti
+                                                                    Super
+                                                                </a>
+                                                                <div class="item-block-products__prices">
+                                                                    <div class="item-block-products__column sale-price">
+                                                                        <div class="item-block-products__name">
+                                                                            Цена по
+                                                                            акции
+                                                                        </div>
+                                                                        <div class="item-block-products__summ">
+                                                                            192 200
+                                                                            <img loading="lazy" src="img/icon/ruble.svg"
+                                                                                alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item-block-products__column">
+                                                                        <div class="item-block-products__name">
+                                                                            Розничная
+                                                                            цена
+                                                                        </div>
+                                                                        <div class="item-block-products__summ">
+                                                                            198 500
+                                                                            <img loading="lazy" src="img/icon/ruble.svg"
+                                                                                alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-block-products__bottom">
+                                                                <div class="item-block-products__buttons">
+                                                                    <div data-quantity class="quantity">
+                                                                        <button data-quantity-minus type="button"
+                                                                            class="quantity__button quantity__button_minus"></button>
+                                                                        <div class="quantity__input">
+                                                                            <input data-quantity-value
+                                                                                autocomplete="off" type="text"
+                                                                                name="form[]" value="1">
+                                                                        </div>
+                                                                        <button data-quantity-plus type="button"
+                                                                            class="quantity__button quantity__button_plus"></button>
+                                                                    </div>
+                                                                    <a href="#" class="btn">
+                                                                        <img class="img-cart" src="img/icon/cart.svg"
+                                                                            alt="">
+                                                                        <span>
+                                                                            В корзину
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="block-products__slide swiper-slide">
+                                                    <div class="block-products__items">
+                                                        <div class="block-products__bg">
+                                                        </div>
+                                                        <div class="block-products__images images-block-products">
+                                                            <div class="images-block-products__slide">
+                                                                <img loading="lazy" class="option-pic"
+                                                                    src="img/products/image43.webp" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-products__center center-block-products">
+                                                            <div class="options">
+                                                                <div class="options__item _active">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image43.webp"
+                                                                        id="o_19" class="options__input options-image"
+                                                                        checked type="radio" value="19" name="option4">
+                                                                    <label for="o_19" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #000;"></span>
+                                                                        </span>
+                                                                        <span class="options__text">Черный</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image2.webp"
+                                                                        id="o_20" class="options__input options-image"
+                                                                        type="radio" value="20" name="option4">
+                                                                    <label for="o_20" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #f5f5f5;">
+                                                                                <span style="background-color: #000;"
+                                                                                    class="two-colors"></span>
+                                                                            </span>
+
+                                                                        </span>
+                                                                        <span class="options__text">Черно-белый</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image3.webp"
+                                                                        id="o_21" class="options__input options-image"
+                                                                        type="radio" value="21" name="option4">
+                                                                    <label for="o_21" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #f5f5f5;"></span>
+                                                                        </span>
+                                                                        <span class="options__text">Белый</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="options__item">
+                                                                    <input hidden
+                                                                        data-options-image="img/products/image4.webp"
+                                                                        id="o_22" class="options__input options-image"
+                                                                        type="radio" value="22" name="option4">
+                                                                    <label for="o_22" class="options__label">
+                                                                        <span class="options__icon icon-gradient">
+                                                                            <span class="circle"
+                                                                                style="background-color: #219fce;">
+                                                                            </span>
+                                                                        </span>
+                                                                        <span class="options__text">Синий</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="center-block-products__fps">
+                                                                <div class="center-block-products__images">
+                                                                    <img src="img/icon/arc.svg" alt="">
+                                                                    <span>
+                                                                        286
+                                                                        <br>
+                                                                        FPS
+                                                                    </span>
+                                                                </div>
+                                                                <div class="center-block-products__text">
+                                                                    <div class="center-block-products__title">
+                                                                        Counter-Strike 2
+                                                                    </div>
+                                                                    <p>Ультра-настройки,
+                                                                        FullHD</p>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <button type="button">
+                                                                        <img src="img/icon/info.svg" alt="">
+                                                                    </button>
+                                                                    <div class="info__content">
+                                                                        <p>
+                                                                            Lorem ipsum
+                                                                            dolor sit
+                                                                            amet
+                                                                            consectetur,
+                                                                            adipisicing
+                                                                            elit.
+                                                                            Totam, cum
+                                                                            vitae
+                                                                            temporibus
+                                                                            numquam, aut
+                                                                            inventore
+                                                                            placeat
+                                                                            facilis
+                                                                            alias
+                                                                            soluta vel
+                                                                            ipsa.
+                                                                            A,
+                                                                            corrupti
+                                                                            dignissimos!
+                                                                            Repellat
+                                                                            odio minus
+                                                                            rerum
+                                                                            veritatis
+                                                                            provident?
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-products__item item-block-products">
+                                                            <div class="item-block-products__top">
+                                                                <div class="item-block-products__stock">
+                                                                    Есть в наличии:
+                                                                    <span>2</span>
+                                                                </div>
+                                                                <a href="#" class="item-block-products__title">
+                                                                    Игровой компьютер i5
+                                                                    14600KF + RTX4070Ti
+                                                                    Super
+                                                                </a>
+                                                                <div class="item-block-products__prices">
+                                                                    <div class="item-block-products__column sale-price">
+                                                                        <div class="item-block-products__name">
+                                                                            Цена по
+                                                                            акции
+                                                                        </div>
+                                                                        <div class="item-block-products__summ">
+                                                                            192 200
+                                                                            <img loading="lazy" src="img/icon/ruble.svg"
+                                                                                alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item-block-products__column">
+                                                                        <div class="item-block-products__name">
+                                                                            Розничная
+                                                                            цена
+                                                                        </div>
+                                                                        <div class="item-block-products__summ">
+                                                                            198 500
+                                                                            <img loading="lazy" src="img/icon/ruble.svg"
+                                                                                alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-block-products__bottom">
+                                                                <div class="item-block-products__buttons">
+                                                                    <div data-quantity class="quantity">
+                                                                        <button data-quantity-minus type="button"
+                                                                            class="quantity__button quantity__button_minus"></button>
+                                                                        <div class="quantity__input">
+                                                                            <input data-quantity-value
+                                                                                autocomplete="off" type="text"
+                                                                                name="form[]" value="1">
+                                                                        </div>
+                                                                        <button data-quantity-plus type="button"
+                                                                            class="quantity__button quantity__button_plus"></button>
+                                                                    </div>
+                                                                    <a href="#" class="btn">
+                                                                        <img class="img-cart" src="img/icon/cart.svg"
+                                                                            alt="">
+                                                                        <span>
+                                                                            В корзину
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-products__arrow-prev arrow-prev">
+                                            <img src="img/icon/arrow1.svg" alt="">
+                                        </div>
+                                        <div class="block-products__arrow-next arrow-next">
+                                            <img src="img/icon/arrow1.svg" alt="">
+                                        </div>
+                                        <button type="button" class="showmore__more">
+                                            <img src="img/bg2.webp" alt="" class="showmore__bg">
+                                            <span>
+                                                Показать еще
+                                                <img src="img/icon/arrow1.svg" alt="">
+                                            </span>
+                                            <span>
+                                                Скрыть
+                                                <img src="img/icon/arrow1.svg" alt="">
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div data-tabs-select3="game2" class="tabs-choose-computer__body">
+                                </div>
+                                <div data-tabs-select3="game3" class="tabs-choose-computer__body">
+                                </div>
+                                <div data-tabs-select3="game4" class="tabs-choose-computer__body">
+                                </div>
+                                <div data-tabs-select3="game5" class="tabs-choose-computer__body">
+                                </div>
+                                <div data-tabs-select3="game6" class="tabs-choose-computer__body">
+                                </div>
+                                <div data-tabs-select3="game7" class="tabs-choose-computer__body">
+                                </div>
+                                <div data-tabs-select3="game8" class="tabs-choose-computer__body">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% include 'blocks/banner.njk' %}
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>

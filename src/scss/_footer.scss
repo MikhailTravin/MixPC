@@ -172,10 +172,15 @@
   // .top-footer__title
 
   &__title {
+    display: block;
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
     margin: 0px 0px 26px 0px;
+    transition: color 0.3s;
+    &:hover {
+      color: var(--theme-color-hover-accent);
+    }
     @media (max-width: 600px) {
       text-align: center;
     }
