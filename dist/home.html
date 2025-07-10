@@ -525,8 +525,10 @@
 									<img loading="lazy" src="img/bg2.webp" alt="" class="bottom-block-choose__bg">
 									<div class="bottom-block-choose__item">
 										<div class="bottom-block-choose__title">Мониторы</div>
-										<div class="btn-circle">
-											<img src="img/icon/arrow1.svg" alt="">
+										<div class="bottom-block-choose__button">
+											<div class="btn-circle">
+												<img src="img/icon/arrow1.svg" alt="">
+											</div>
 										</div>
 									</div>
 									<div class="bottom-block-choose__image">
@@ -1771,15 +1773,224 @@
 					<div class="popup__figure figure">
 						<img loading="lazy" src="img/figure6.webp" alt="">
 					</div>
+					<div class="popup__figure2 figure">
+						<img loading="lazy" src="img/figure7.webp" alt="">
+					</div>
 					<div class="popup__body popup-other">
 						<div class="form">
 							<div class="form__content">
-								<div class="form__top">
-									<div class="form__title">
-										Накопители SSD M2
+								<div data-da=".form__body, 650, 3" class="filter-form">
+									<div class="filter-form__title">
+										<div class="filter-form__icon">
+											<img loading="lazy" src="img/icon/filter.svg" alt="">
+										</div>
+										<span>
+											ФИльтр
+										</span>
+									</div>
+									<div data-spollers class="spollers">
+										<div class="spollers__filter-mob">
+											<span>
+												Фильтр
+											</span>
+											<div class="spollers__close">
+												<img loading="lazy" src="img/icon/close2.svg" alt="">
+											</div>
+										</div>
+										<div class="spollers__item">
+											<button type="button" data-spoller class="spollers__title">
+												<span>Цена, руб</span>
+												<img loading="lazy" src="img/icon/arrow1.svg" alt="">
+											</button>
+											<div class="spollers__body">
+												<div class="spollers__rating">
+													<div class="spollers__values">
+														<div class="spollers__value">
+															<div class="spollers__input">
+																<input id="price-start" placeholder="0" value="0" type="text">
+															</div>
+														</div>
+														<div class="spollers__value">
+															<div class="spollers__input">
+																<input id="price-end" placeholder="0" value="0" type="text">
+															</div>
+														</div>
+													</div>
+													<div class="spollers__range"></div>
+												</div>
+											</div>
+										</div>
+										<div class="spollers__item">
+											<button type="button" data-spoller class="spollers__title">
+												<span>Бренд</span>
+												<img loading="lazy" src="img/icon/arrow1.svg" alt="">
+											</button>
+											<div class="spollers__body">
+												<div data-showmore="items" class="showmore">
+													<div data-showmore-content="6" data-fixed-height="194" class="showmore__content">
+														<div class="checkbox">
+															<input id="c_5" class="checkbox__input" type="checkbox" value="5" name="form[2]">
+															<label for="c_5" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">Afox</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<input id="c_6" class="checkbox__input" type="checkbox" value="6" name="form[2]">
+															<label for="c_6" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">Asrock</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<input id="c_7" class="checkbox__input" type="checkbox" value="7" name="form[2]">
+															<label for="c_7" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">Asus</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<input id="c_8" class="checkbox__input" type="checkbox" value="8" name="form[2]">
+															<label for="c_8" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">Colorful</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<input id="c_9" class="checkbox__input" type="checkbox" value="9" name="form[2]">
+															<label for="c_9" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">Gigabyte</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<input id="c_10" class="checkbox__input" type="checkbox" value="10" name="form[2]">
+															<label for="c_10" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">MSI</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<input id="c_11" class="checkbox__input" type="checkbox" value="11" name="form[2]">
+															<label for="c_11" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">MSI</span>
+															</label>
+														</div>
+													</div>
+													<button hidden data-showmore-button type="button" class="showmore__more">
+														<span>Показать еще</span>
+														<span>Скрыть</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="spollers__item">
+											<button type="button" data-spoller class="spollers__title">
+												<span>Объем памяти</span>
+												<img loading="lazy" src="img/icon/arrow1.svg" alt="">
+											</button>
+											<div class="spollers__body">
+												<div data-showmore="items" class="showmore">
+													<div data-showmore-content="6" data-fixed-height="194" class="showmore__content">
+														<div class="checkbox">
+															<input id="c_12" class="checkbox__input" type="checkbox" value="12" name="form[3]">
+															<label for="c_12" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">120</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<input id="c_13" class="checkbox__input" type="checkbox" value="13" name="form[3]">
+															<label for="c_13" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">240</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<input id="c_14" class="checkbox__input" type="checkbox" value="14" name="form[3]">
+															<label for="c_14" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">512</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<input id="c_15" class="checkbox__input" type="checkbox" value="15" name="form[3]">
+															<label for="c_15" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">1000</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<input id="c_16" class="checkbox__input" type="checkbox" value="16" name="form[3]">
+															<label for="c_16" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">2000</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<input id="c_17" class="checkbox__input" type="checkbox" value="17" name="form[3]">
+															<label for="c_17" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">5000</span>
+															</label>
+														</div>
+													</div>
+													<button hidden data-showmore-button type="button" class="showmore__more">
+														<span>Показать еще</span>
+														<span>Скрыть</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="spollers__item">
+											<button type="button" data-spoller class="spollers__title">
+												<span>Доставка дней</span>
+												<img loading="lazy" src="img/icon/arrow1.svg" alt="">
+											</button>
+											<div class="spollers__body">
+												<div data-showmore="items" class="showmore">
+													<div data-showmore-content="6" data-fixed-height="194" class="showmore__content">
+														<div class="checkbox">
+															<input id="c_18" class="checkbox__input" type="checkbox" value="18" name="form[4]">
+															<label for="c_18" class="checkbox__label">
+																<span class="checkbox__icon"></span>
+																<span class="checkbox__text">2</span>
+															</label>
+														</div>
+													</div>
+													<button hidden data-showmore-button type="button" class="showmore__more">
+														<span>Показать еще</span>
+														<span>Скрыть</span>
+													</button>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="form__body">
+									<div class="form__top">
+										<div class="form__title">
+											Накопители SSD M2
+										</div>
+									</div>
+									<div class="search-header">
+										<div class="search-header__body">
+											<button type="button" class="search-header__button">
+												<img src="img/icon/search.svg" alt="">
+											</button>
+											<input autocomplete="off" type="text" name="form[]" placeholder="Введите запрос">
+											<div class="btn">
+												<span>Найти</span>
+											</div>
+										</div>
+									</div>
+									<div class="form__tags">
+										<button type="button" class="form__tag">
+											<span>Объем памяти: 1000 GB</span>
+											<img loading="lazy" src="img/icon/close3.svg" alt="">
+										</button>
+									</div>
 									<div data-simplebar class="form__simplebar">
 										<div class="form__products">
 											<div class="form__column">
@@ -2055,12 +2266,14 @@
 				</div>
 			</div>
 		</div>
+		</div>
 		<script src="js/swiper-10.2.0.min.js"></script>
 		<script src="js/simplebar.min.js"></script>
+		<script src="js/wNumb.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
 		<script src="js/fancybox.umd.js"></script>
 		<script src="js/dynamic_adapt.js"></script>
 		<script src="js/scripts.js"></script>
-
 
 	</body>
 

@@ -1096,6 +1096,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // Функция для сброса всех табов третьего уровня
+  function resetLevel3Tabs() {
+    document.querySelectorAll('.tabs-choose-computer__title[data-tabs-select3]').forEach(btn => {
+      btn.classList.remove('_tab-active');
+    });
+    document.querySelectorAll('.tabs-choose-computer__body[data-tabs-select3]').forEach(content => {
+      content.classList.remove('_tab-active');
+    });
+  }
+
   // Функция для активации таба по значению селекта
   function activateTabByValue(select, value) {
     const tabSelect = select.querySelector(`option[value="${value}"]`).getAttribute('data-tabs-select') ||
@@ -1113,10 +1123,17 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.tabs-choose-computer__body[data-tabs-select]').forEach(content => {
         content.classList.remove('_tab-active');
       });
+      // Сбрасываем табы второго и третьего уровня при переключении первого уровня
+      document.querySelectorAll('.tabs-choose-computer__body[data-tabs-select2]').forEach(content => {
+        content.classList.remove('_tab-active');
+      });
+      resetLevel3Tabs();
     } else if (isSecondLevel) {
       document.querySelectorAll('.tabs-choose-computer__body[data-tabs-select2]').forEach(content => {
         content.classList.remove('_tab-active');
       });
+      // Сбрасываем табы третьего уровня при переключении второго уровня
+      resetLevel3Tabs();
     }
 
     // Активируем соответствующий таб
@@ -1134,18 +1151,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Инициализация табов
   function initTabs() {
-    // Для десктопов - активируем первый таб
-    if (!isMobile()) {
-      const firstTab = document.querySelector('.tabs-choose-computer__title[data-tabs-select]');
-      if (firstTab) firstTab.click();
-    } else {
-      // Для мобильных - активируем первый option в селектах
+    // Для мобильных - активируем первый option в селектах (только для первого и второго уровня)
+    if (isMobile()) {
       document.querySelectorAll('.tabs-choose-computer__navigation select').forEach(select => {
         if (select.options.length > 0) {
           const firstValue = select.options[0].value;
           activateTabByValue(select, firstValue);
         }
       });
+
+      // Для табов третьего уровня активируем первую кнопку
+      const firstTabLevel3 = document.querySelector('.tabs-choose-computer__title[data-tabs-select3]');
+      if (firstTabLevel3) {
+        firstTabLevel3.click();
+      }
     }
   }
 
@@ -1166,6 +1185,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.tabs-choose-computer__body[data-tabs-select]').forEach(content => {
           content.classList.remove('_tab-active');
         });
+        // Сбрасываем табы второго и третьего уровня
+        document.querySelectorAll('.tabs-choose-computer__body[data-tabs-select2]').forEach(content => {
+          content.classList.remove('_tab-active');
+        });
+        resetLevel3Tabs();
 
         // Активируем текущий таб
         this.classList.add('_tab-active');
@@ -1202,6 +1226,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.tabs-choose-computer__body[data-tabs-select2]').forEach(content => {
           content.classList.remove('_tab-active');
         });
+        // Сбрасываем табы третьего уровня
+        resetLevel3Tabs();
 
         // Активируем текущий таб
         this.classList.add('_tab-active');
@@ -1218,6 +1244,29 @@ document.addEventListener('DOMContentLoaded', function () {
           const event = new Event('change');
           select.dispatchEvent(event);
         }
+
+        updateNavigationActiveClass(navigation);
+      });
+    });
+
+    // Обработчики для табов третьего уровня (работают всегда, независимо от разрешения)
+    document.querySelectorAll('.tabs-choose-computer__title[data-tabs-select3]').forEach(button => {
+      button.addEventListener('click', function (e) {
+        const tabSelect = this.getAttribute('data-tabs-select3');
+        const navigation = this.closest('.tabs-choose-computer__navigation');
+
+        // Удаляем активные классы
+        document.querySelectorAll('.tabs-choose-computer__title[data-tabs-select3]').forEach(btn => {
+          btn.classList.remove('_tab-active');
+        });
+        document.querySelectorAll('.tabs-choose-computer__body[data-tabs-select3]').forEach(content => {
+          content.classList.remove('_tab-active');
+        });
+
+        // Активируем текущий таб
+        this.classList.add('_tab-active');
+        const activeContent = document.querySelector(`.tabs-choose-computer__body[data-tabs-select3="${tabSelect}"]`);
+        if (activeContent) activeContent.classList.add('_tab-active');
 
         updateNavigationActiveClass(navigation);
       });
@@ -1621,6 +1670,12 @@ function showMore() {
 
     // Расчёт высоты видимой части
     function getHeight(showMoreBlock, showMoreContent) {
+      // Если есть data-fixed-height и блок не раскрыт
+      if (showMoreContent.dataset.fixedHeight && !showMoreBlock.classList.contains('_showmore-active')) {
+        return parseInt(showMoreContent.dataset.fixedHeight);
+      }
+
+      // Стандартный расчет высоты
       let hiddenHeight = 0;
       const showMoreType = showMoreBlock.dataset.showmore || 'size';
       const rowGap = parseFloat(getComputedStyle(showMoreContent).rowGap) || 0;
@@ -1640,8 +1695,7 @@ function showMore() {
           }
         }
       } else {
-        const heightValue = parseInt(showMoreContent.dataset.showmoreContent) || 150;
-        hiddenHeight = heightValue;
+        hiddenHeight = parseInt(showMoreContent.dataset.showmoreContent) || 150;
       }
 
       return hiddenHeight;
@@ -1667,30 +1721,247 @@ function showMore() {
           const showMoreBlock = button.closest('[data-showmore]');
           const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
           const speed = showMoreBlock.dataset.showmoreButton || 500;
-          const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
 
           if (!showMoreContent.classList.contains('_slide')) {
-            showMoreBlock.classList.contains('_showmore-active')
-              ? _slideUp(showMoreContent, speed, hiddenHeight)
-              : _slideDown(showMoreContent, speed, getOriginalHeight(showMoreContent));
+            const isExpanding = !showMoreBlock.classList.contains('_showmore-active');
+
+            if (isExpanding) {
+              // При раскрытии убираем фиксированную высоту
+              showMoreContent.style.height = '';
+              _slideDown(showMoreContent, speed, getOriginalHeight(showMoreContent));
+            } else {
+              // При закрытии используем стандартный расчет
+              const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+              _slideUp(showMoreContent, speed, hiddenHeight);
+            }
 
             showMoreBlock.classList.toggle('_showmore-active');
           }
         }
-      } else if (targetType === 'resize') {
-        if (showMoreBlocksRegular?.length) initItems(showMoreBlocksRegular);
-        if (mdQueriesArray?.length) initItemsMedia(mdQueriesArray);
       }
     }
   });
 }
 showMore();
 
+
 //========================================================================================================================================================
 
 Fancybox.bind("[data-fancybox]", {
   // опции
 });
+
+//========================================================================================================================================================
+
+//Спойлер
+function spollers() {
+  const spollersArray = document.querySelectorAll("[data-spollers]");
+  if (spollersArray.length > 0) {
+    const spollersRegular = Array.from(spollersArray).filter((function (item, index, self) {
+      return !item.dataset.spollers.split(",")[0];
+    }));
+    if (spollersRegular.length) initSpollers(spollersRegular);
+
+    function initSpollers(spollersArray, matchMedia = false) {
+      spollersArray.forEach((spollersBlock => {
+        spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
+        if (matchMedia.matches || !matchMedia) {
+          spollersBlock.classList.add("_spoller-init");
+          initSpollerBody(spollersBlock);
+          spollersBlock.addEventListener("click", setSpollerAction);
+        } else {
+          spollersBlock.classList.remove("_spoller-init");
+          initSpollerBody(spollersBlock, false);
+          spollersBlock.removeEventListener("click", setSpollerAction);
+        }
+      }));
+    }
+
+    function initSpollerBody(spollersBlock, hideSpollerBody = true) {
+      let spollerTitles = spollersBlock.querySelectorAll("[data-spoller]");
+      if (spollerTitles.length) {
+        spollerTitles = Array.from(spollerTitles).filter((item => item.closest("[data-spollers]") === spollersBlock));
+        spollerTitles.forEach((spollerTitle => {
+          if (hideSpollerBody) {
+            spollerTitle.removeAttribute("tabindex");
+            if (!spollerTitle.classList.contains("_spoller-active")) {
+              spollerTitle.nextElementSibling.hidden = true;
+            } else {
+              // Инициализируем showmore при открытом спойлере
+              setTimeout(() => initShowMoreInSpoller(spollerTitle.nextElementSibling), 10);
+            }
+          } else {
+            spollerTitle.setAttribute("tabindex", "-1");
+            spollerTitle.nextElementSibling.hidden = false;
+          }
+        }));
+      }
+    }
+
+    function initShowMoreInSpoller(spollerBody) {
+      const showMoreBlocks = spollerBody.querySelectorAll('[data-showmore]');
+
+      showMoreBlocks.forEach(showMoreBlock => {
+        const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
+        const showMoreButton = showMoreBlock.querySelector('[data-showmore-button]');
+        const items = showMoreContent.children;
+        const limit = 6; // Показываем 6 элементов
+
+        if (items.length > limit) {
+          // 1. Сначала сбросим ограничения, чтобы измерить реальные размеры
+          showMoreContent.style.maxHeight = '';
+          showMoreContent.style.overflow = '';
+
+          // 2. Ждем следующего фрейма для применения стилей
+          setTimeout(() => {
+            // 3. Рассчитываем высоту для 6 элементов
+            let height = 0;
+            const itemHeight = [];
+
+            // Измеряем высоту каждого из первых 6 элементов
+            for (let i = 0; i < limit; i++) {
+              const item = items[i];
+              const styles = getComputedStyle(item);
+              const marginTop = parseFloat(styles.marginTop) || 0;
+              const marginBottom = parseFloat(styles.marginBottom) || 0;
+              itemHeight.push(item.offsetHeight + marginTop + marginBottom);
+            }
+
+            // Учитываем промежутки (gap) между элементами
+            const gap = parseFloat(getComputedStyle(showMoreContent).gap) || 0;
+            height = itemHeight.reduce((sum, h) => sum + h, 0) + (gap * (limit - 1));
+
+            // 4. Применяем рассчитанную высоту
+            showMoreContent.style.maxHeight = `${height}px`;
+            showMoreContent.style.overflow = 'hidden';
+            showMoreButton.hidden = false;
+
+            // 5. Настройка кнопки "Показать еще"
+            showMoreButton.addEventListener('click', function (e) {
+              e.preventDefault();
+              const isExpanded = showMoreContent.style.maxHeight !== `${height}px`;
+
+              if (!isExpanded) {
+                showMoreContent.style.maxHeight = `${showMoreContent.scrollHeight}px`;
+                showMoreButton.querySelector('span:first-child').hidden = true;
+                showMoreButton.querySelector('span:last-child').hidden = false;
+              } else {
+                showMoreContent.style.maxHeight = `${height}px`;
+                showMoreButton.querySelector('span:first-child').hidden = false;
+                showMoreButton.querySelector('span:last-child').hidden = true;
+              }
+            });
+          }, 50); // Небольшая задержка для гарантии применения стилей
+        } else {
+          showMoreButton.hidden = true;
+        }
+      });
+    }
+
+    function setSpollerAction(e) {
+      const el = e.target;
+      if (el.closest("[data-spoller]")) {
+        const spollerTitle = el.closest("[data-spoller]");
+        const spollerItem = spollerTitle.closest(".spollers__item");
+        const spollersBlock = spollerTitle.closest("[data-spollers]");
+        const oneSpoller = spollersBlock.hasAttribute("data-one-spoller");
+        const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
+
+        if (!spollersBlock.querySelectorAll("._slide").length) {
+          if (oneSpoller && !spollerTitle.classList.contains("_spoller-active")) {
+            hideSpollersBody(spollersBlock);
+          }
+
+          spollerTitle.classList.toggle("_spoller-active");
+          if (spollerItem) spollerItem.classList.toggle("_spoller-active");
+
+          const contentBlock = spollerTitle.nextElementSibling;
+          _slideToggle(contentBlock, spollerSpeed, () => {
+            // Инициализируем showonly при открытии спойлера
+            if (spollerTitle.classList.contains("_spoller-active")) {
+              setTimeout(() => initShowMoreInSpoller(contentBlock), 10);
+            }
+          });
+
+          e.preventDefault();
+        }
+      }
+    }
+
+    function hideSpollersBody(spollersBlock) {
+      const spollerActiveTitle = spollersBlock.querySelector("[data-spoller]._spoller-active");
+      const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
+      if (spollerActiveTitle && !spollersBlock.querySelectorAll("._slide").length) {
+        spollerActiveTitle.classList.remove("_spoller-active");
+        _slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed);
+      }
+    }
+
+    const spollersClose = document.querySelectorAll("[data-spoller-close]");
+    if (spollersClose.length) {
+      document.addEventListener("click", (function (e) {
+        const el = e.target;
+        if (!el.closest("[data-spollers]")) {
+          spollersClose.forEach((spollerClose => {
+            const spollersBlock = spollerClose.closest("[data-spollers]");
+            const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
+            spollerClose.classList.remove("_spoller-active");
+            _slideUp(spollerClose.nextElementSibling, spollerSpeed);
+          }));
+        }
+      }));
+    }
+  }
+}
+
+// Инициализация
+spollers();
+
+
+//========================================================================================================================================================
+
+//Ползунок
+function rangeInit() {
+  const ratingCalc = document.querySelector('.spollers__range');
+  if (ratingCalc) {
+    noUiSlider.create(ratingCalc, {
+      start: [3980, 110540],
+      connect: true,
+      range: {
+        'min': [500],
+        'max': [400000]
+      },
+      format: wNumb({
+        decimals: 0,
+        thousand: ' ',
+      })
+    });
+
+    const priceStart = document.getElementById('price-start');
+    const priceEnd = document.getElementById('price-end');
+
+    // Связь полей ввода со слайдером
+    priceStart.addEventListener('change', function () {
+      ratingCalc.noUiSlider.set([this.value, null]);
+    });
+
+    priceEnd.addEventListener('change', function () {
+      ratingCalc.noUiSlider.set([null, this.value]);
+    });
+
+    // Обновляем значения инпутов при движении слайдера
+    ratingCalc.noUiSlider.on('update', function (values, handle) {
+      var value = values[handle].replace(' ₽', ''); // Убираем символ валюты
+
+      if (handle) {
+        priceEnd.value = value;
+      } else {
+        priceStart.value = value;
+      }
+    });
+  }
+}
+rangeInit();
 
 //========================================================================================================================================================
 
@@ -2236,6 +2507,24 @@ if (copyBtn) {
       console.error('Не удалось скопировать: ', err);
       alert('Не удалось скопировать текст. Проверьте настройки браузера.');
     }
+  });
+}
+
+//========================================================================================================================================================
+
+//Фильтр
+const filterTitle = document.querySelector('.filter-form__title');
+const spollersClose = document.querySelector('.spollers__close');
+
+if (filterTitle) {
+  filterTitle.addEventListener('click', function () {
+    document.documentElement.classList.add('lock', 'filter-open');
+  });
+}
+
+if (spollersClose) {
+  spollersClose.addEventListener('click', function () {
+    document.documentElement.classList.remove('lock', 'filter-open');
   });
 }
 
