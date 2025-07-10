@@ -17,7 +17,7 @@ body {
       background-color: rgba(43, 42, 41, 0.4);
     }
   }
-  &.lock {
+  .lock &{
     overflow: hidden;
   }
 }
@@ -623,7 +623,7 @@ img {
       ._showmore-active & {
         display: none;
         &:last-child {
-          display: block;
+          display: flex;
         }
         img {
           transform: rotate(-180deg);
