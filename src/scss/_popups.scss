@@ -633,6 +633,7 @@ body::after {
 }
 
 .filter-form {
+    position: relative;
     flex: 0 0 253px;
     padding: 62px 40px 53px 40px;
     border-radius: 0px 0px 0px 20px;
@@ -644,6 +645,7 @@ body::after {
         flex: 1 1 auto;
         padding: 0px 0px 20px 0px;
     }
+
     // .filter-form__title
 
     &__title {

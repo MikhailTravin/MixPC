@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Подобрать компьютер</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header.njk' %}
+        <main class="main">
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <div class="breadcrumbs__content">
+                        <ul>
+                            <li><a href="#"><img src="img/icon/home.svg" alt=""></a></li>
+                            <li><a href="#">- Каталог</a></li>
+                            <li><span>- Компьютеры</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-catalog">
+                <div class="block-catalog-top">
+                    <div class="container">
+                        <div class="block-catalog-top__content">
+                            <h1 class="title1">Компьютеры</h1>
+                            <div class="block-catalog-top__body">
+                                <a href="#" class="block-catalog-top__card">
+                                    <span>Игровые компьютеры</span>
+                                    <img src="img/products/image13.webp" alt="" class="block-catalog-top__pic1">
+                                </a>
+                                <a href="#" class="block-catalog-top__card">
+                                    <span>Офисные компьютеры</span>
+                                    <img src="img/products/image32.webp" alt="" class="block-catalog-top__pic1">
+                                </a>
+                                <a href="#" class="block-catalog-top__card">
+                                    <span>компьютеры
+                                        для дома и учебы</span>
+                                    <img src="img/products/image2.webp" alt="" class="block-catalog-top__pic1">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-catalog-bottom">
+                    <div class="container">
+                        <div class="block-catalog-bottom__content">
+                            <div data-da=".block-catalog-bottom__nav, 992, last" class="block-catalog-bottom__filter">
+                                <div class="filter-form">
+                                    <div class="filter-form__title">
+                                        <div class="filter-form__icon">
+                                            <img loading="lazy" src="img/icon/filter.svg" alt="">
+                                        </div>
+                                        <span>
+                                            ФИльтр
+                                        </span>
+                                    </div>
+                                    <div data-spollers class="spollers">
+                                        <div class="spollers__filter-mob">
+                                            <span>
+                                                Фильтр
+                                            </span>
+                                            <div class="spollers__close">
+                                                <img loading="lazy" src="img/icon/close2.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="spollers__item">
+                                            <button type="button" data-spoller class="spollers__title">
+                                                <span>Цена, руб</span>
+                                                <img loading="lazy" src="img/icon/arrow1.svg" alt="">
+                                            </button>
+                                            <div class="spollers__body">
+                                                <div class="spollers__rating">
+                                                    <div class="spollers__values">
+                                                        <div class="spollers__value">
+                                                            <div class="spollers__input">
+                                                                <input id="price-start" placeholder="0" value="0"
+                                                                    type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="spollers__value">
+                                                            <div class="spollers__input">
+                                                                <input id="price-end" placeholder="0" value="0"
+                                                                    type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="spollers__range"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="spollers__item">
+                                            <button type="button" data-spoller class="spollers__title">
+                                                <span>Бренд</span>
+                                                <img loading="lazy" src="img/icon/arrow1.svg" alt="">
+                                            </button>
+                                            <div class="spollers__body">
+                                                <div data-showmore="items" class="showmore">
+                                                    <div data-showmore-content="6" data-fixed-height="194"
+                                                        class="showmore__content">
+                                                        <div class="checkbox">
+                                                            <input id="c_5" class="checkbox__input" type="checkbox"
+                                                                value="5" name="form[2]">
+                                                            <label for="c_5" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">Afox</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input id="c_6" class="checkbox__input" type="checkbox"
+                                                                value="6" name="form[2]">
+                                                            <label for="c_6" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">Asrock</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input id="c_7" class="checkbox__input" type="checkbox"
+                                                                value="7" name="form[2]">
+                                                            <label for="c_7" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">Asus</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input id="c_8" class="checkbox__input" type="checkbox"
+                                                                value="8" name="form[2]">
+                                                            <label for="c_8" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">Colorful</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input id="c_9" class="checkbox__input" type="checkbox"
+                                                                value="9" name="form[2]">
+                                                            <label for="c_9" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">Gigabyte</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input id="c_10" class="checkbox__input" type="checkbox"
+                                                                value="10" name="form[2]">
+                                                            <label for="c_10" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">MSI</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input id="c_11" class="checkbox__input" type="checkbox"
+                                                                value="11" name="form[2]">
+                                                            <label for="c_11" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">MSI</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <button hidden data-showmore-button type="button"
+                                                        class="showmore__more">
+                                                        <span>Показать еще</span>
+                                                        <span>Скрыть</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="spollers__item">
+                                            <button type="button" data-spoller class="spollers__title">
+                                                <span>Объем памяти</span>
+                                                <img loading="lazy" src="img/icon/arrow1.svg" alt="">
+                                            </button>
+                                            <div class="spollers__body">
+                                                <div data-showmore="items" class="showmore">
+                                                    <div data-showmore-content="6" data-fixed-height="194"
+                                                        class="showmore__content">
+                                                        <div class="checkbox">
+                                                            <input id="c_12" class="checkbox__input" type="checkbox"
+                                                                value="12" name="form[3]">
+                                                            <label for="c_12" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">120</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input id="c_13" class="checkbox__input" type="checkbox"
+                                                                value="13" name="form[3]">
+                                                            <label for="c_13" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">240</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input id="c_14" class="checkbox__input" type="checkbox"
+                                                                value="14" name="form[3]">
+                                                            <label for="c_14" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">512</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input id="c_15" class="checkbox__input" type="checkbox"
+                                                                value="15" name="form[3]">
+                                                            <label for="c_15" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">1000</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input id="c_16" class="checkbox__input" type="checkbox"
+                                                                value="16" name="form[3]">
+                                                            <label for="c_16" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">2000</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input id="c_17" class="checkbox__input" type="checkbox"
+                                                                value="17" name="form[3]">
+                                                            <label for="c_17" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">5000</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <button hidden data-showmore-button type="button"
+                                                        class="showmore__more">
+                                                        <span>Показать еще</span>
+                                                        <span>Скрыть</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="spollers__item">
+                                            <button type="button" data-spoller class="spollers__title">
+                                                <span>Доставка дней</span>
+                                                <img loading="lazy" src="img/icon/arrow1.svg" alt="">
+                                            </button>
+                                            <div class="spollers__body">
+                                                <div data-showmore="items" class="showmore">
+                                                    <div data-showmore-content="6" data-fixed-height="194"
+                                                        class="showmore__content">
+                                                        <div class="checkbox">
+                                                            <input id="c_18" class="checkbox__input" type="checkbox"
+                                                                value="18" name="form[4]">
+                                                            <label for="c_18" class="checkbox__label">
+                                                                <span class="checkbox__icon"></span>
+                                                                <span class="checkbox__text">2</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <button hidden data-showmore-button type="button"
+                                                        class="showmore__more">
+                                                        <span>Показать еще</span>
+                                                        <span>Скрыть</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-catalog-bottom__left">
+                                <div class="block-catalog-bottom__nav">
+                                    <select name="form[]" class="form">
+                                        <option value="1" selected>По популярности</option>
+                                        <option value="2">По популярности №2</option>
+                                        <option value="3">По популярности №3</option>
+                                        <option value="4">По популярности №4</option>
+                                    </select>
+                                </div>
+                                <div class="block-catalog-bottom__cards">
+                                    <div class="block-products__items">
+                                        <div class="block-products__bg"></div>
+                                        <div class="block-products__images images-block-products">
+                                            <div class="images-block-products__slider swiper">
+                                                <div class="images-block-products__wrapper swiper-wrapper">
+                                                    <a href="img/products/image39.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery2">
+                                                        <img loading="lazy" src="img/products/image39.webp" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="images-block-products__pagination pagination"></div>
+                                        </div>
+                                        <div class="block-products__item item-block-products">
+                                            <div class="item-block-products__top">
+                                                <div class="item-block-products__stock">
+                                                    Есть в наличии: <span>1</span>
+                                                </div>
+                                                <a href="#" class="item-block-products__title">
+                                                    Видеокарта RTX3060 12GB Palit Dual OC
+                                                </a>
+                                                <div class="item-block-products__prices">
+                                                    <div class="item-block-products__column sale-price">
+                                                        <div class="item-block-products__name">
+                                                            Цена по акции
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            30 990
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-block-products__column">
+                                                        <div class="item-block-products__name">
+                                                            Розничная цена
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            31 990
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-block-products__bottom">
+                                                <div class="item-block-products__buttons">
+                                                    <div data-quantity class="quantity">
+                                                        <button data-quantity-minus type="button"
+                                                            class="quantity__button quantity__button_minus"></button>
+                                                        <div class="quantity__input">
+                                                            <input data-quantity-value autocomplete="off" type="text"
+                                                                name="form[]" value="1">
+                                                        </div>
+                                                        <button data-quantity-plus type="button"
+                                                            class="quantity__button quantity__button_plus"></button>
+                                                    </div>
+                                                    <a href="#" class="btn">
+                                                        <img class="img-cart" src="img/icon/cart.svg" alt="">
+                                                        <span>
+                                                            В корзину
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-products__items">
+                                        <div class="block-products__bg"></div>
+                                        <div class="block-products__images images-block-products">
+                                            <div class="images-block-products__slider swiper">
+                                                <div class="images-block-products__wrapper swiper-wrapper">
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="options">
+                                                <div class="options__item">
+                                                    <!--
+                                                    <input hidden id="o_5" class="options__input change-color" checked
+                                                        type="radio" value="5" name="option2">-->
+                                                    <label class="options__label">
+                                                        <span class="options__icon icon-gradient">
+                                                            <span class="circle" style="background-color: #000;"></span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="options__item">
+                                                    <!--
+                                                    <input hidden id="o_6" class="options__input change-color"
+                                                        type="radio" value="6" name="option2">-->
+                                                    <label class="options__label">
+                                                        <span class="options__icon">
+                                                            <span class="circle" style="background-color: #fff;"></span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="options__item">
+                                                    <!--
+                                                    <input hidden id="o_7" class="options__input change-color"
+                                                        type="radio" value="7" name="option2">-->
+                                                    <label class="options__label">
+                                                        <span class="options__icon">
+                                                            <span class="circle"
+                                                                style="background-color: #00da95;"></span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="images-block-products__pagination pagination"></div>
+                                        </div>
+                                        <div class="block-products__item item-block-products">
+                                            <div class="item-block-products__top">
+                                                <div class="item-block-products__stock">
+                                                    Есть в наличии: <span>2</span>
+                                                </div>
+                                                <a href="#" class="item-block-products__title">
+                                                    Игровой компьютер i5 14600KF + RTX4070Ti Super
+                                                </a>
+                                                <div class="item-block-products__prices">
+                                                    <div class="item-block-products__column sale-price">
+                                                        <div class="item-block-products__name">
+                                                            Цена по акции
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            192 200
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-block-products__column">
+                                                        <div class="item-block-products__name">
+                                                            Розничная цена
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            198 500
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-block-products__bottom">
+                                                <div class="item-block-products__equipment">
+                                                    <div class="item-block-products__name">
+                                                        Накопитель SSD
+                                                    </div>
+                                                    <div class="options">
+                                                        <div class="options__item">
+                                                            <input hidden id="o_8" class="options__input" checked
+                                                                type="radio" value="8" name="option3">
+                                                            <label for="o_8" class="options__label"><span
+                                                                    class="options__text">1000 GB</span></label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_9" class="options__input" type="radio"
+                                                                value="9" name="option3">
+                                                            <label for="o_9" class="options__label"><span
+                                                                    class="options__text">2000 GB</span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-block-products__buttons">
+                                                    <div data-quantity class="quantity">
+                                                        <button data-quantity-minus type="button"
+                                                            class="quantity__button quantity__button_minus"></button>
+                                                        <div class="quantity__input">
+                                                            <input data-quantity-value autocomplete="off" type="text"
+                                                                name="form[]" value="1">
+                                                        </div>
+                                                        <button data-quantity-plus type="button"
+                                                            class="quantity__button quantity__button_plus"></button>
+                                                    </div>
+                                                    <a href="#" class="btn">
+                                                        <img class="img-cart" src="img/icon/cart.svg" alt="">
+                                                        <span>
+                                                            В корзину
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-products__items">
+                                        <div class="block-products__bg"></div>
+                                        <div class="block-products__images images-block-products">
+                                            <div class="images-block-products__slider swiper">
+                                                <div class="images-block-products__wrapper swiper-wrapper">
+                                                    <a href="img/products/image41.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery5">
+                                                        <img loading="lazy" src="img/products/image41.webp" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="images-block-products__pagination pagination"></div>
+                                        </div>
+                                        <div class="block-products__item item-block-products">
+                                            <div class="item-block-products__top">
+                                                <div class="item-block-products__stock">
+                                                    Есть в наличии: <span>5</span>
+                                                </div>
+                                                <a href="#" class="item-block-products__title">
+                                                    Процессор AM4 AMD Ryzen 5 3600 OEM
+                                                </a>
+                                                <div class="item-block-products__prices">
+                                                    <div class="item-block-products__column sale-price">
+                                                        <div class="item-block-products__name">
+                                                            Цена по акции
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            7 550
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-block-products__column">
+                                                        <div class="item-block-products__name">
+                                                            Розничная цена
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            7 890
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-block-products__bottom">
+                                                <div class="item-block-products__buttons">
+                                                    <div data-quantity class="quantity">
+                                                        <button data-quantity-minus type="button"
+                                                            class="quantity__button quantity__button_minus"></button>
+                                                        <div class="quantity__input">
+                                                            <input data-quantity-value autocomplete="off" type="text"
+                                                                name="form[]" value="1">
+                                                        </div>
+                                                        <button data-quantity-plus type="button"
+                                                            class="quantity__button quantity__button_plus"></button>
+                                                    </div>
+                                                    <a href="#" class="btn">
+                                                        <img class="img-cart" src="img/icon/cart.svg" alt="">
+                                                        <span>
+                                                            В корзину
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-products__items">
+                                        <div class="block-products__bg"></div>
+                                        <div class="block-products__images images-block-products">
+                                            <div class="images-block-products__slider swiper">
+                                                <div class="images-block-products__wrapper swiper-wrapper">
+                                                    <a href="img/products/image39.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery2">
+                                                        <img loading="lazy" src="img/products/image39.webp" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="images-block-products__pagination pagination"></div>
+                                        </div>
+                                        <div class="block-products__item item-block-products">
+                                            <div class="item-block-products__top">
+                                                <div class="item-block-products__stock">
+                                                    Есть в наличии: <span>1</span>
+                                                </div>
+                                                <a href="#" class="item-block-products__title">
+                                                    Видеокарта RTX3060 12GB Palit Dual OC
+                                                </a>
+                                                <div class="item-block-products__prices">
+                                                    <div class="item-block-products__column sale-price">
+                                                        <div class="item-block-products__name">
+                                                            Цена по акции
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            30 990
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-block-products__column">
+                                                        <div class="item-block-products__name">
+                                                            Розничная цена
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            31 990
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-block-products__bottom">
+                                                <div class="item-block-products__buttons">
+                                                    <div data-quantity class="quantity">
+                                                        <button data-quantity-minus type="button"
+                                                            class="quantity__button quantity__button_minus"></button>
+                                                        <div class="quantity__input">
+                                                            <input data-quantity-value autocomplete="off" type="text"
+                                                                name="form[]" value="1">
+                                                        </div>
+                                                        <button data-quantity-plus type="button"
+                                                            class="quantity__button quantity__button_plus"></button>
+                                                    </div>
+                                                    <a href="#" class="btn">
+                                                        <img class="img-cart" src="img/icon/cart.svg" alt="">
+                                                        <span>
+                                                            В корзину
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-products__items">
+                                        <div class="block-products__bg"></div>
+                                        <div class="block-products__images images-block-products">
+                                            <div class="images-block-products__slider swiper">
+                                                <div class="images-block-products__wrapper swiper-wrapper">
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="options">
+                                                <div class="options__item">
+                                                    <!--
+                                                    <input hidden id="o_5" class="options__input change-color" checked
+                                                        type="radio" value="5" name="option2">-->
+                                                    <label class="options__label">
+                                                        <span class="options__icon icon-gradient">
+                                                            <span class="circle" style="background-color: #000;"></span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="options__item">
+                                                    <!--
+                                                    <input hidden id="o_6" class="options__input change-color"
+                                                        type="radio" value="6" name="option2">-->
+                                                    <label class="options__label">
+                                                        <span class="options__icon">
+                                                            <span class="circle" style="background-color: #fff;"></span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="options__item">
+                                                    <!--
+                                                    <input hidden id="o_7" class="options__input change-color"
+                                                        type="radio" value="7" name="option2">-->
+                                                    <label class="options__label">
+                                                        <span class="options__icon">
+                                                            <span class="circle"
+                                                                style="background-color: #00da95;"></span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="images-block-products__pagination pagination"></div>
+                                        </div>
+                                        <div class="block-products__item item-block-products">
+                                            <div class="item-block-products__top">
+                                                <div class="item-block-products__stock">
+                                                    Есть в наличии: <span>2</span>
+                                                </div>
+                                                <a href="#" class="item-block-products__title">
+                                                    Игровой компьютер i5 14600KF + RTX4070Ti Super
+                                                </a>
+                                                <div class="item-block-products__prices">
+                                                    <div class="item-block-products__column sale-price">
+                                                        <div class="item-block-products__name">
+                                                            Цена по акции
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            192 200
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-block-products__column">
+                                                        <div class="item-block-products__name">
+                                                            Розничная цена
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            198 500
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-block-products__bottom">
+                                                <div class="item-block-products__equipment">
+                                                    <div class="item-block-products__name">
+                                                        Накопитель SSD
+                                                    </div>
+                                                    <div class="options">
+                                                        <div class="options__item">
+                                                            <input hidden id="o_8" class="options__input" checked
+                                                                type="radio" value="8" name="option3">
+                                                            <label for="o_8" class="options__label"><span
+                                                                    class="options__text">1000 GB</span></label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_9" class="options__input" type="radio"
+                                                                value="9" name="option3">
+                                                            <label for="o_9" class="options__label"><span
+                                                                    class="options__text">2000 GB</span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-block-products__buttons">
+                                                    <div data-quantity class="quantity">
+                                                        <button data-quantity-minus type="button"
+                                                            class="quantity__button quantity__button_minus"></button>
+                                                        <div class="quantity__input">
+                                                            <input data-quantity-value autocomplete="off" type="text"
+                                                                name="form[]" value="1">
+                                                        </div>
+                                                        <button data-quantity-plus type="button"
+                                                            class="quantity__button quantity__button_plus"></button>
+                                                    </div>
+                                                    <a href="#" class="btn">
+                                                        <img class="img-cart" src="img/icon/cart.svg" alt="">
+                                                        <span>
+                                                            В корзину
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-products__items">
+                                        <div class="block-products__bg"></div>
+                                        <div class="block-products__images images-block-products">
+                                            <div class="images-block-products__slider swiper">
+                                                <div class="images-block-products__wrapper swiper-wrapper">
+                                                    <a href="img/products/image41.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery5">
+                                                        <img loading="lazy" src="img/products/image41.webp" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="images-block-products__pagination pagination"></div>
+                                        </div>
+                                        <div class="block-products__item item-block-products">
+                                            <div class="item-block-products__top">
+                                                <div class="item-block-products__stock">
+                                                    Есть в наличии: <span>5</span>
+                                                </div>
+                                                <a href="#" class="item-block-products__title">
+                                                    Процессор AM4 AMD Ryzen 5 3600 OEM
+                                                </a>
+                                                <div class="item-block-products__prices">
+                                                    <div class="item-block-products__column sale-price">
+                                                        <div class="item-block-products__name">
+                                                            Цена по акции
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            7 550
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-block-products__column">
+                                                        <div class="item-block-products__name">
+                                                            Розничная цена
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            7 890
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-block-products__bottom">
+                                                <div class="item-block-products__buttons">
+                                                    <div data-quantity class="quantity">
+                                                        <button data-quantity-minus type="button"
+                                                            class="quantity__button quantity__button_minus"></button>
+                                                        <div class="quantity__input">
+                                                            <input data-quantity-value autocomplete="off" type="text"
+                                                                name="form[]" value="1">
+                                                        </div>
+                                                        <button data-quantity-plus type="button"
+                                                            class="quantity__button quantity__button_plus"></button>
+                                                    </div>
+                                                    <a href="#" class="btn">
+                                                        <img class="img-cart" src="img/icon/cart.svg" alt="">
+                                                        <span>
+                                                            В корзину
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-products__items">
+                                        <div class="block-products__bg"></div>
+                                        <div class="block-products__images images-block-products">
+                                            <div class="images-block-products__slider swiper">
+                                                <div class="images-block-products__wrapper swiper-wrapper">
+                                                    <a href="img/products/image39.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery2">
+                                                        <img loading="lazy" src="img/products/image39.webp" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="images-block-products__pagination pagination"></div>
+                                        </div>
+                                        <div class="block-products__item item-block-products">
+                                            <div class="item-block-products__top">
+                                                <div class="item-block-products__stock">
+                                                    Есть в наличии: <span>1</span>
+                                                </div>
+                                                <a href="#" class="item-block-products__title">
+                                                    Видеокарта RTX3060 12GB Palit Dual OC
+                                                </a>
+                                                <div class="item-block-products__prices">
+                                                    <div class="item-block-products__column sale-price">
+                                                        <div class="item-block-products__name">
+                                                            Цена по акции
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            30 990
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-block-products__column">
+                                                        <div class="item-block-products__name">
+                                                            Розничная цена
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            31 990
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-block-products__bottom">
+                                                <div class="item-block-products__buttons">
+                                                    <div data-quantity class="quantity">
+                                                        <button data-quantity-minus type="button"
+                                                            class="quantity__button quantity__button_minus"></button>
+                                                        <div class="quantity__input">
+                                                            <input data-quantity-value autocomplete="off" type="text"
+                                                                name="form[]" value="1">
+                                                        </div>
+                                                        <button data-quantity-plus type="button"
+                                                            class="quantity__button quantity__button_plus"></button>
+                                                    </div>
+                                                    <a href="#" class="btn">
+                                                        <img class="img-cart" src="img/icon/cart.svg" alt="">
+                                                        <span>
+                                                            В корзину
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-products__items">
+                                        <div class="block-products__bg"></div>
+                                        <div class="block-products__images images-block-products">
+                                            <div class="images-block-products__slider swiper">
+                                                <div class="images-block-products__wrapper swiper-wrapper">
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                    <a href="img/products/image40.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery3">
+                                                        <img loading="lazy" src="img/products/image40.webp" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="options">
+                                                <div class="options__item">
+                                                    <!--
+                                                    <input hidden id="o_5" class="options__input change-color" checked
+                                                        type="radio" value="5" name="option2">-->
+                                                    <label class="options__label">
+                                                        <span class="options__icon icon-gradient">
+                                                            <span class="circle" style="background-color: #000;"></span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="options__item">
+                                                    <!--
+                                                    <input hidden id="o_6" class="options__input change-color"
+                                                        type="radio" value="6" name="option2">-->
+                                                    <label class="options__label">
+                                                        <span class="options__icon">
+                                                            <span class="circle" style="background-color: #fff;"></span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="options__item">
+                                                    <!--
+                                                    <input hidden id="o_7" class="options__input change-color"
+                                                        type="radio" value="7" name="option2">-->
+                                                    <label class="options__label">
+                                                        <span class="options__icon">
+                                                            <span class="circle"
+                                                                style="background-color: #00da95;"></span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="images-block-products__pagination pagination"></div>
+                                        </div>
+                                        <div class="block-products__item item-block-products">
+                                            <div class="item-block-products__top">
+                                                <div class="item-block-products__stock">
+                                                    Есть в наличии: <span>2</span>
+                                                </div>
+                                                <a href="#" class="item-block-products__title">
+                                                    Игровой компьютер i5 14600KF + RTX4070Ti Super
+                                                </a>
+                                                <div class="item-block-products__prices">
+                                                    <div class="item-block-products__column sale-price">
+                                                        <div class="item-block-products__name">
+                                                            Цена по акции
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            192 200
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-block-products__column">
+                                                        <div class="item-block-products__name">
+                                                            Розничная цена
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            198 500
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-block-products__bottom">
+                                                <div class="item-block-products__equipment">
+                                                    <div class="item-block-products__name">
+                                                        Накопитель SSD
+                                                    </div>
+                                                    <div class="options">
+                                                        <div class="options__item">
+                                                            <input hidden id="o_8" class="options__input" checked
+                                                                type="radio" value="8" name="option3">
+                                                            <label for="o_8" class="options__label"><span
+                                                                    class="options__text">1000 GB</span></label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_9" class="options__input" type="radio"
+                                                                value="9" name="option3">
+                                                            <label for="o_9" class="options__label"><span
+                                                                    class="options__text">2000 GB</span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-block-products__buttons">
+                                                    <div data-quantity class="quantity">
+                                                        <button data-quantity-minus type="button"
+                                                            class="quantity__button quantity__button_minus"></button>
+                                                        <div class="quantity__input">
+                                                            <input data-quantity-value autocomplete="off" type="text"
+                                                                name="form[]" value="1">
+                                                        </div>
+                                                        <button data-quantity-plus type="button"
+                                                            class="quantity__button quantity__button_plus"></button>
+                                                    </div>
+                                                    <a href="#" class="btn">
+                                                        <img class="img-cart" src="img/icon/cart.svg" alt="">
+                                                        <span>
+                                                            В корзину
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-products__items">
+                                        <div class="block-products__bg"></div>
+                                        <div class="block-products__images images-block-products">
+                                            <div class="images-block-products__slider swiper">
+                                                <div class="images-block-products__wrapper swiper-wrapper">
+                                                    <a href="img/products/image41.webp"
+                                                        class="images-block-products__slide swiper-slide"
+                                                        data-fancybox="gallery5">
+                                                        <img loading="lazy" src="img/products/image41.webp" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="images-block-products__pagination pagination"></div>
+                                        </div>
+                                        <div class="block-products__item item-block-products">
+                                            <div class="item-block-products__top">
+                                                <div class="item-block-products__stock">
+                                                    Есть в наличии: <span>5</span>
+                                                </div>
+                                                <a href="#" class="item-block-products__title">
+                                                    Процессор AM4 AMD Ryzen 5 3600 OEM
+                                                </a>
+                                                <div class="item-block-products__prices">
+                                                    <div class="item-block-products__column sale-price">
+                                                        <div class="item-block-products__name">
+                                                            Цена по акции
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            7 550
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-block-products__column">
+                                                        <div class="item-block-products__name">
+                                                            Розничная цена
+                                                        </div>
+                                                        <div class="item-block-products__summ">
+                                                            7 890
+                                                            <img loading="lazy" src="img/icon/ruble.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-block-products__bottom">
+                                                <div class="item-block-products__buttons">
+                                                    <div data-quantity class="quantity">
+                                                        <button data-quantity-minus type="button"
+                                                            class="quantity__button quantity__button_minus"></button>
+                                                        <div class="quantity__input">
+                                                            <input data-quantity-value autocomplete="off" type="text"
+                                                                name="form[]" value="1">
+                                                        </div>
+                                                        <button data-quantity-plus type="button"
+                                                            class="quantity__button quantity__button_plus"></button>
+                                                    </div>
+                                                    <a href="#" class="btn">
+                                                        <img class="img-cart" src="img/icon/cart.svg" alt="">
+                                                        <span>
+                                                            В корзину
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button data-showmore-button type="button" class="showmore__more">
+                                    <img src="img/bg2.webp" alt="" class="showmore__bg">
+                                    <span>
+                                        Показать еще
+                                        <img src="img/icon/arrow1.svg" alt="">
+                                    </span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% include 'blocks/banner.njk' %}
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+        <svg width="0" height="0" style="position: absolute;">
+            <defs>
+                <clipPath id="adaptive-clip" clipPathUnits="objectBoundingBox">
+                    <path d="
+        M1 0.0251256
+        C1 0.0112478 0.964184 0 0.92 0
+        H0.08
+        C0.0358172 0 0 0.0112479 0 0.0251256
+        V0.974158
+        C0 0.990125 0.0466384 1.00196 0.0965138 0.999085
+        C0.393606 0.981936 0.59676 0.982022 0.904032 0.999271
+        C0.953724 1.00207 1 0.990175 1 0.974384
+        V0.0251256
+        Z
+      " />
+                </clipPath>
+            </defs>
+        </svg>
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>
