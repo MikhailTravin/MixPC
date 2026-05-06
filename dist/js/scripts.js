@@ -2639,3 +2639,92 @@ allTabsContainers.forEach(container => {
   // Инициализация: показываем первый таб
   showDefaultTab();
 });
+
+//========================================================================================================================================================
+
+function initProductCards() {
+  const items = document.querySelectorAll('.block-catalog-bottom__left .block-products__items, .block-products__items');
+
+  if (items) {
+    items.forEach(item => {
+      const bg = item.querySelector('.block-products__bg');
+      if (!bg) return;
+
+      const getBottomHeight = () => {
+        const bottom = item.querySelector('.item-block-products__bottom');
+        if (!bottom) return 0;
+
+        const bottomHeight = bottom.offsetHeight;
+        return bottomHeight;
+      };
+
+      const setHeight = () => {
+        const height = item.offsetHeight;
+        bg.style.height = `${height}px`;
+      };
+
+      const setMarginBottom = () => {
+        const bottomHeight = getBottomHeight();
+        if (bottomHeight > 0) {
+          item.style.marginBottom = `-${bottomHeight}px`;
+        } else {
+          item.style.marginBottom = '';
+        }
+      };
+
+      const updateAll = () => {
+        setHeight();
+        setMarginBottom();
+      };
+
+      updateAll();
+
+      const handleHover = () => {
+        updateAll();
+      };
+
+      item.addEventListener('mouseenter', handleHover);
+      item.addEventListener('mouseleave', handleHover);
+
+      const parentItems = item.closest('.block-products__items');
+      if (parentItems && parentItems !== item) {
+        parentItems.addEventListener('mouseenter', handleHover);
+        parentItems.addEventListener('mouseleave', handleHover);
+      }
+
+      const images = item.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.complete) {
+          img.addEventListener('load', () => {
+            updateAll();
+          });
+        }
+      });
+
+      const radios = item.querySelectorAll('input[type="radio"]');
+      radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          setTimeout(() => {
+            updateAll();
+          }, 50);
+        });
+      });
+      window.addEventListener('resize', () => {
+        updateAll();
+      });
+    });
+  }
+}
+function checkWidthAndInit() {
+  if (window.innerWidth >= 993) {
+    initProductCards();
+  }
+}
+document.addEventListener('DOMContentLoaded', checkWidthAndInit);
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    checkWidthAndInit();
+  }, 150);
+});
